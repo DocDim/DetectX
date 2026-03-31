@@ -1,2 +1,5 @@
 converter.py
 generate_test_data.py
+dict_patologies.json
+__pycache__/
+.vscode/
