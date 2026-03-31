@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detect-X | Aide à la Décision Clinique (SIMR)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
+        @keyframes blink-bg { 50% { background-color: #fef2f2; border-color: #ef4444; } }
+        .critical-alert { animation: blink-bg 1s step-start infinite; border-color: #dc2626 !important; border-width: 2px !important; }
+        .symptom-tag { animation: tag-in 0.2s ease-out; }
+        @keyframes tag-in { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+        
+        /* Style pour la barre de progression */
+        .progress-container { width: 100%; background-color: #f1f5f9; border-radius: 9999px; overflow: hidden; display: none; }
+        .progress-bar { width: 0%; height: 8px; background-color: #3b82f6; transition: width 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen p-4 md:p-8 font-sans">
+
+    <div id="disclaimerModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/80 backdrop-blur-md p-4">
+        <div class="bg-white w-full max-w-lg rounded-3xl shadow-2xl border border-slate-200 overflow-hidden transform transition-all">
+            <div class="p-8 text-center">
+                <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span class="text-3xl">⚠️</span>
+                </div>
+                <h2 class="text-xl font-bold text-slate-800 mb-4 uppercase tracking-wide">Avis de non-responsabilité</h2>
+                <div class="text-sm text-slate-600 space-y-4 text-left leading-relaxed">
+                    <p>
+                        <strong>Detect-X</strong> est un outil technologique conçu exclusivement pour servir de 
+                        <span class="text-blue-600 font-bold">support à la réflexion clinique</span>.
+                    </p>
+                    <p>En utilisant cet outil, vous reconnaissez que :</p>
+                    <ul class="list-disc pl-5 space-y-2 italic text-xs">
+                        <li>Les suggestions fournies ne constituent pas un diagnostic médical final.</li>
+                        <li>L'algorithme se base sur les définitions de cas du <strong>Guide Technique SIMR Cameroun</strong>.</li>
+                        <li>La décision thérapeutique finale relève de votre <strong>entière responsabilité</strong>.</li>
+                    </ul>
+                </div>
+                <button onclick="acceptDisclaimer()" class="mt-8 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg active:scale-95">
+                    J'ai compris et j'accepte
+                </button>
+            </div>
+            <div class="bg-slate-50 py-3 px-8 text-[10px] text-slate-400 text-center border-t border-slate-100 uppercase font-bold tracking-widest">
+                Detect-X | Sécurité & Éthique Clinique
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto">
+        <header class="mb-8 flex flex-col md:flex-row justify-between items-center bg-white p-6 rounded-2xl shadow-sm border border-slate-200 gap-4">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <img src="{{ url_for('static', filename='img/logo_detectx.png') }}" alt="Logo Detect-X" style="height: 45px; width: auto;" class="object-contain">
+                <p class="text-slate-500 italic text-[10px] uppercase tracking-widest font-semibold ml-1">Surveillance Sanitaire Intégrée</p>
+            </div>
+            
+            <div class="flex gap-3">
+                <button onclick="toggleModal(true)" class="flex items-center gap-2 bg-blue-50 hover:bg-blue-100 text-blue-600 px-5 py-2.5 rounded-xl text-sm font-bold transition-all active:scale-95">
+                    <span>📂</span> Import SIMR (CSV)
+                </button>
+                <a href="/dashboard" class="flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-lg active:scale-95">
+                    <span>📊</span> Statistiques
+                </a>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-6">
+                <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <h2 class="text-sm font-bold text-slate-800 uppercase tracking-widest mb-4 flex items-center"><span class="mr-2">👤</span> Données Patient & District</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div><label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">District de Santé</label><input type="text" id="patientDistrict" class="w-full p-2 text-sm border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500"></div>
+                        <div><label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Formation Sanitaire (FOSA)</label><input type="text" id="patientFosa" class="w-full p-2 text-sm border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500"></div>
+                        <div><label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Date Consultation</label><input type="date" id="consultationDate" class="w-full p-2 text-sm border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500"></div>
+                        <div><label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Code Patient / Dossier</label><input type="text" id="patientCode" class="w-full p-2 text-sm border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500"></div>
+                        <div><label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Sexe</label><select id="patientSexe" class="w-full p-2 text-sm border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500"><option value="M">Masculin</option><option value="F">Féminin</option></select></div>
+                        <div><label class="block text-[10px] font-bold text-slate-500 uppercase mb-1">Âge</label><input type="number" id="patientAge" class="w-full p-2 text-sm border border-slate-200 rounded-lg outline-none focus:ring-2 focus:ring-blue-500"></div>
+                    </div>
+                </section>
+
+                <section class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                    <h2 class="text-sm font-bold text-slate-800 uppercase tracking-widest mb-4 flex items-center"><span class="mr-2">📝</span> Observation Clinique</h2>
+                    <div class="relative mb-4">
+                        <input type="text" 
+                               id="symptomInput" 
+                               list="symptomsSuggestions" 
+                               class="w-full p-4 text-sm border border-slate-200 rounded-xl focus:ring-2 focus:ring-blue-500 outline-none transition-all" 
+                               placeholder="Rechercher un signe clinique (ex: Fièvre)..." 
+                               oninput="handleInput(this)"
+                               onkeypress="handleKeyPress(event)">
+                        <datalist id="symptomsSuggestions"></datalist>
+                    </div>
+                    <div id="selectedSymptoms" class="flex flex-wrap gap-2 mb-6"></div>
+                    
+                    <div class="flex gap-4">
+                        <button onclick="analyzeSymptoms()" class="flex-[2] bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-lg active:scale-95">
+                            Lancer l'analyse SIMR
+                        </button>
+                        <button onclick="resetForm()" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold py-3 rounded-xl transition-all">
+                            Effacer
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 h-fit sticky top-8">
+                <div class="border-b pb-4 mb-4 flex justify-between items-center">
+                    <h2 class="text-lg font-semibold text-slate-800">Suspicions</h2>
+                    <div class="flex gap-2">
+                        <button onclick="confirmSave()" id="saveBtn" class="hidden text-[10px] bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-2 rounded transition-colors uppercase tracking-tight">Enregistrer</button>
+                        <button onclick="exportReport()" id="exportBtn" class="hidden text-[10px] bg-slate-100 hover:bg-slate-200 text-slate-600 font-bold py-1 px-2 rounded transition-colors uppercase tracking-tight">CSV</button>
+                    </div>
+                </div>
+                <div id="resultsList" class="space-y-4 custom-scrollbar max-h-[600px] overflow-y-auto pr-2">
+                    <p class="text-slate-400 text-xs italic text-center py-10">Veuillez saisir les signes pour voir les définitions de cas correspondantes.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="mt-12 py-8 border-t border-slate-200 text-center">
+            <p class="text-sm text-slate-500">&copy; 2026 <strong>Detect-X</strong> | Surveillance Sanitaire Cameroun</p>
+            <p class="text-[9px] text-slate-400 mt-2 max-w-2xl mx-auto italic">
+                Note : Système expert basé sur des pondérations cliniques. L'analyse ne remplace pas le diagnostic final par un médecin ou un laboratoire.
+            </p>
+        </footer>
+    </div>
+
+    <div id="csvModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-slate-900/50 backdrop-blur-sm p-4">
+        <div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
+            <div class="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50">
+                <h2 class="text-sm font-bold text-slate-800 uppercase tracking-widest flex items-center">📂 Analyse Groupée</h2>
+                <button onclick="toggleModal(false)" class="text-slate-400 hover:text-slate-600 text-2xl font-bold">&times;</button>
+            </div>
+            <div class="p-8">
+                <div class="flex flex-col gap-6">
+                    <label id="uploadZone" for="multiCsvFile" class="flex flex-col items-center justify-center w-full h-40 border-2 border-slate-200 border-dashed rounded-2xl cursor-pointer bg-slate-50 hover:bg-blue-50 transition-all">
+                        <div class="flex flex-col items-center justify-center pt-5 pb-6 text-center px-4">
+                            <svg class="w-10 h-10 mb-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path></svg>
+                            <p id="fileNameDisplay" class="text-xs text-slate-600 font-medium">Glissez votre fichier CSV ici</p>
+                        </div>
+                        <input id="multiCsvFile" type="file" class="hidden" accept=".csv" onchange="updateFileName(this)" />
+                    </label>
+
+                    <div id="progressContainer" class="progress-container">
+                        <div class="flex justify-between mb-2">
+                            <span id="progressText" class="text-[10px] font-bold text-blue-600 uppercase">Traitement en cours...</span>
+                            <span id="progressPercent" class="text-[10px] font-bold text-slate-400">0%</span>
+                        </div>
+                        <div class="w-full bg-slate-100 rounded-full h-2">
+                            <div id="progressBar" class="progress-bar"></div>
+                        </div>
+                    </div>
+
+                    <button id="importBtn" onclick="uploadMultiCSV()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition-all shadow-lg active:scale-95">Traiter le fichier</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let lastResults = [];
+        let addedSymptoms = new Set();
+        let currentPatientData = null;
+
+        // --- DISCLAIMER ---
+        function checkDisclaimer() {
+            if (sessionStorage.getItem('detectx_disclaimer_accepted')) {
+                document.getElementById('disclaimerModal').classList.add('hidden');
+            }
+        }
+        function acceptDisclaimer() {
+            sessionStorage.setItem('detectx_disclaimer_accepted', 'true');
+            document.getElementById('disclaimerModal').classList.add('hidden');
+        }
+
+        window.onload = async () => {
+            checkDisclaimer();
+            try {
+                const resp = await fetch('/get_symptoms');
+                const data = await resp.json();
+                if (data.success) {
+                    const list = document.getElementById('symptomsSuggestions');
+                    data.symptoms.forEach(s => { 
+                        const opt = document.createElement('option'); 
+                        opt.value = s; 
+                        list.appendChild(opt); 
+                    });
+                }
+            } catch (e) { console.error("Erreur chargement symptômes", e); }
+        };
+
+        // --- SAISIE INTELLIGENTE ---
+        function handleInput(input) {
+            const val = input.value.trim().toLowerCase();
+            const options = document.getElementById('symptomsSuggestions').childNodes;
+            
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].value && options[i].value.toLowerCase() === val) {
+                    if (!addedSymptoms.has(val)) {
+                        addSymptomTag(val);
+                        input.value = "";
+                    } else {
+                        input.value = "";
+                    }
+                    break;
+                }
+            }
+        }
+
+        function handleKeyPress(e) { 
+            if (e.key === "Enter") { 
+                const input = document.getElementById('symptomInput'); 
+                const val = input.value.trim().toLowerCase(); 
+                if (val && !addedSymptoms.has(val)) { 
+                    addSymptomTag(val); 
+                    input.value = ""; 
+                } 
+            } 
+        }
+
+        function addSymptomTag(s) {
+            addedSymptoms.add(s);
+            const tag = document.createElement('div');
+            tag.className = "symptom-tag flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1.5 rounded-lg border border-blue-100 text-xs font-semibold";
+            tag.innerHTML = `${s} <button onclick="removeSymptom('${s}', this)" class="text-blue-400 hover:text-red-500">×</button>`;
+            document.getElementById('selectedSymptoms').appendChild(tag);
+        }
+
+        function removeSymptom(s, btn) { addedSymptoms.delete(s); btn.parentElement.remove(); }
+
+        function resetForm() { location.reload(); }
+
+        async function analyzeSymptoms() {
+            const symptoms = Array.from(addedSymptoms);
+            if (!symptoms.length) return alert("Veuillez ajouter au moins un signe clinique.");
+            
+            const payload = {
+                symptoms,
+                district: document.getElementById('patientDistrict').value,
+                fosa: document.getElementById('patientFosa').value,
+                date: document.getElementById('consultationDate').value,
+                code: document.getElementById('patientCode').value,
+                sexe: document.getElementById('patientSexe').value,
+                age: document.getElementById('patientAge').value
+            };
+
+            const resp = await fetch('/analyze', { 
+                method: 'POST', 
+                headers: { 'Content-Type': 'application/json' }, 
+                body: JSON.stringify(payload) 
+            });
+            
+            const data = await resp.json();
+            if (data.success) {
+                currentPatientData = {
+                    metadata: { district: payload.district, fosa: payload.fosa, date: payload.date, patient_code: payload.code, sexe: payload.sexe, age: payload.age },
+                    symptoms_input: symptoms,
+                    results: data.results
+                };
+                lastResults = data.results.map(res => ({ ...payload, maladie: res.maladie, score: res.score, signes: res.symptomes_detectes.join('; ') }));
+                displayResults(data.results);
+                document.getElementById('saveBtn').classList.remove('hidden');
+                document.getElementById('exportBtn').classList.remove('hidden');
+            }
+        }
+
+        function displayResults(results) {
+            const list = document.getElementById('resultsList');
+            list.innerHTML = '';
+
+            if (results.length > 0) {
+                results.forEach(res => {
+                    const isCritical = res.score >= 50;
+                    const alertStyle = isCritical ? 'critical-alert border-red-500 bg-red-50' : 'border-slate-200 bg-white';
+                    
+                    list.innerHTML += `
+                        <div class="p-4 rounded-xl border-l-4 shadow-sm transition-all ${alertStyle}">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h3 class="font-bold text-sm text-slate-800">${res.maladie}</h3>
+                                    <span class="text-[9px] font-bold text-amber-600 uppercase tracking-tighter">⚠️ Seuil: ${res.seuil_alerte}</span>
+                                </div>
+                                <div class="text-right flex flex-col items-end">
+                                    <span class="bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">${res.score}%</span>
+                                    <span class="text-[8px] text-slate-400 mt-0.5">Pondération SIMR</span>
+                                </div>
+                            </div>
+                            <div class="bg-white/60 rounded-lg p-2 mb-3 border border-slate-100">
+                                <p class="text-[10px] text-slate-600 leading-tight">
+                                    <strong class="text-slate-800">Définition :</strong> ${res.definition}
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-1">
+                                ${res.symptomes_detectes.map(s => `
+                                    <span class="text-[9px] bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded border border-blue-200 font-medium">
+                                        ${s}
+                                    </span>
+                                `).join('')}
+                            </div>
+                        </div>
+                    `;
+                });
+            } else {
+                list.innerHTML = '<p class="text-center text-xs text-slate-400 py-10 italic">Aucune suspicion identifiée selon les critères du guide technique.</p>';
+            }
+        }
+
+        async function confirmSave() {
+            if (!currentPatientData) return;
+            const resp = await fetch('/save_case', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(currentPatientData) });
+            const result = await resp.json();
+            if (result.success) { alert("✅ Dossier enregistré."); document.getElementById('saveBtn').classList.add('hidden'); }
+        }
+
+        function toggleModal(show) { 
+            document.getElementById('csvModal').classList.toggle('hidden', !show); 
+            if(!show) {
+                // Reset de la barre de progression à la fermeture
+                document.getElementById('progressContainer').style.display = 'none';
+                document.getElementById('progressBar').style.width = '0%';
+                document.getElementById('importBtn').disabled = false;
+                document.getElementById('importBtn').innerText = "Traiter le fichier";
+                document.getElementById('uploadZone').style.display = 'flex';
+            }
+        }
+        
+        function updateFileName(input) { if (input.files[0]) document.getElementById('fileNameDisplay').innerText = input.files[0].name; }
+
+        async function exportReport() {
+            const resp = await fetch('/export_report', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ results: lastResults }) });
+            const blob = await resp.blob();
+            const a = document.createElement('a'); a.href = window.URL.createObjectURL(blob); a.download = `DetectX_SIMR_Rapport.csv`; a.click();
+        }
+
+        // --- GESTION DE L'IMPORTATION AVEC PROGRESSION ---
+        function uploadMultiCSV() {
+            const fileInput = document.getElementById('multiCsvFile');
+            if (!fileInput.files[0]) return alert("Fichier manquant.");
+            
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            const xhr = new XMLHttpRequest();
+            
+            // Affichage de l'UI de progression
+            document.getElementById('progressContainer').style.display = 'block';
+            document.getElementById('uploadZone').style.display = 'none';
+            document.getElementById('importBtn').disabled = true;
+            document.getElementById('importBtn').innerText = "Importation...";
+
+            // Écouteur de progression (Upload vers serveur)
+            xhr.upload.addEventListener("progress", (e) => {
+                if (e.lengthComputable) {
+                    const percentComplete = (e.loaded / e.total) * 100;
+                    document.getElementById('progressBar').style.width = percentComplete + '%';
+                    document.getElementById('progressPercent').innerText = Math.round(percentComplete) + '%';
+                }
+            });
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    const res = JSON.parse(xhr.responseText);
+                    if (res.success) {
+                        document.getElementById('progressText').innerText = "Analyse terminée !";
+                        document.getElementById('progressText').classList.replace('text-blue-600', 'text-green-600');
+                        setTimeout(() => {
+                            alert(`Importation et analyse réussies : ${res.count} dossiers intégrés.`);
+                            toggleModal(false);
+                            location.href = '/dashboard'; // Redirection vers les stats
+                        }, 500);
+                    } else {
+                        alert("Erreur lors de l'importation : " + res.message);
+                        toggleModal(false);
+                    }
+                }
+            };
+
+            xhr.open('POST', '/upload_csv', true);
+            xhr.send(formData);
+        }
+    </script>
+</body>
+</html>

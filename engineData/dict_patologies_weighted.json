@@ -1,0 +1,249 @@
+[
+    {
+        "maladie": "Charbon (Anthrax)",
+        "definition_cas": "Lésion cutanée (papule, vésicule ou escarre noire) ou détresse respiratoire aiguë après contact avec des animaux.",
+        "criteres": [
+            {"nom": "eschare noire", "poids": 3},
+            {"nom": "papule démangeante", "poids": 2},
+            {"nom": "oedème", "poids": 2},
+            {"nom": "difficultés respiratoires", "poids": 2},
+            {"nom": "fièvre", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Chikungunya",
+        "definition_cas": "Fièvre élevée brutale et douleurs articulaires invalidantes.",
+        "criteres": [
+            {"nom": "douleurs articulaires sévères", "poids": 3},
+            {"nom": "fièvre brutale", "poids": 2},
+            {"nom": "éruption cutanée", "poids": 2},
+            {"nom": "céphalées", "poids": 1}
+        ],
+        "seuil_alerte": "Augmentation inhabituelle"
+    },
+    {
+        "maladie": "Choléra",
+        "definition_cas": "Diarrhée aqueuse aiguë sévère chez une personne de 2 ans ou plus.",
+        "criteres": [
+            {"nom": "diarrhée aqueuse profuse", "poids": 3},
+            {"nom": "selles en eau de riz", "poids": 3},
+            {"nom": "déshydratation sévère", "poids": 2},
+            {"nom": "vomissements", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Dengue",
+        "definition_cas": "Fièvre élevée avec céphalées, douleurs rétro-orbitaires ou arthralgies.",
+        "criteres": [
+            {"nom": "douleurs rétro-orbitaires", "poids": 3},
+            {"nom": "fièvre élevée", "poids": 2},
+            {"nom": "éruption cutanée", "poids": 2},
+            {"nom": "myalgies", "poids": 1}
+        ],
+        "seuil_alerte": "Augmentation inhabituelle"
+    },
+    {
+        "maladie": "Diarrhée sanglante (Shigellose)",
+        "definition_cas": "Diarrhée avec présence de sang rouge visible dans les selles.",
+        "criteres": [
+            {"nom": "diarrhée avec sang visible", "poids": 3},
+            {"nom": "ténesme", "poids": 2},
+            {"nom": "fièvre", "poids": 1}
+        ],
+        "seuil_alerte": "5 cas suspects/semaine/localité"
+    },
+    {
+        "maladie": "Dracunculose",
+        "definition_cas": "Lésion cutanée avec émergence d'un ver filiforme blanc.",
+        "criteres": [
+            {"nom": "émergence d'un ver blanc filiforme", "poids": 3},
+            {"nom": "lésion cutanée vésiculeuse", "poids": 2},
+            {"nom": "prurit localisé", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre de la vallée du Rift",
+        "definition_cas": "Fièvre avec troubles de la vision ou manifestations hémorragiques.",
+        "criteres": [
+            {"nom": "troubles de la vision", "poids": 3},
+            {"nom": "syndrome hémorragique", "poids": 3},
+            {"nom": "myalgies", "poids": 2},
+            {"nom": "fièvre", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre du Nil occidental",
+        "definition_cas": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+        "criteres": [
+            {"nom": "signes de méningo-encéphalite", "poids": 3},
+            {"nom": "fièvre", "poids": 1},
+            {"nom": "céphalées", "poids": 1},
+            {"nom": "fatigue", "poids": 1}
+        ],
+        "seuil_alerte": "Augmentation inhabituelle"
+    },
+    {
+        "maladie": "Fièvre de Crimée-Congo",
+        "definition_cas": "Fièvre brutale et myalgies suivies de signes hémorragiques.",
+        "criteres": [
+            {"nom": "pétéchies", "poids": 3},
+            {"nom": "ecchymoses", "poids": 3},
+            {"nom": "fièvre", "poids": 1},
+            {"nom": "vertiges", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre de Lassa",
+        "definition_cas": "Fièvre graduelle avec malaise, maux de gorge et hémorragies.",
+        "criteres": [
+            {"nom": "hémorragies", "poids": 3},
+            {"nom": "maux de gorge", "poids": 2},
+            {"nom": "fièvre graduelle", "poids": 1},
+            {"nom": "douleurs thoraciques", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre à virus Zika",
+        "definition_cas": "Fièvre modérée avec éruption maculo-papuleuse et conjonctivite.",
+        "criteres": [
+            {"nom": "conjonctivite non purulente", "poids": 3},
+            {"nom": "éruption maculo-papuleuse", "poids": 2},
+            {"nom": "arthralgies", "poids": 2},
+            {"nom": "fièvre modérée", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre Jaune",
+        "definition_cas": "Fièvre brutale suivie d'un ictère dans les 14 jours.",
+        "criteres": [
+            {"nom": "ictère (jaunisse)", "poids": 3},
+            {"nom": "ictère dans les 14 jours", "poids": 3},
+            {"nom": "douleurs lombaires", "poids": 2},
+            {"nom": "fièvre", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre hémorragique Ebola",
+        "definition_cas": "Fièvre brutale, fatigue intense et hémorragies inexpliquées.",
+        "criteres": [
+            {"nom": "hémorragies internes/externes", "poids": 3},
+            {"nom": "fièvre brutale", "poids": 2},
+            {"nom": "fatigue intense", "poids": 1},
+            {"nom": "maux de gorge", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre hémorragique de Marbourg",
+        "definition_cas": "Fièvre élevée sévère avec syndrome hémorragique grave.",
+        "criteres": [
+            {"nom": "manifestations hémorragiques", "poids": 3},
+            {"nom": "fièvre élevée", "poids": 2},
+            {"nom": "malaise profond", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "IRA (Infection Respiratoire Aiguë)",
+        "definition_cas": "Toux ou difficultés respiratoires avec fièvre > 38°C.",
+        "criteres": [
+            {"nom": "difficulté respiratoire", "poids": 3},
+            {"nom": "fréquence respiratoire élevée", "poids": 2},
+            {"nom": "toux", "poids": 1},
+            {"nom": "fièvre > 38°C", "poids": 1}
+        ],
+        "seuil_alerte": "Augmentation du nombre de cas"
+    },
+    {
+        "maladie": "Méningite",
+        "definition_cas": "Fièvre brutale avec raideur de la nuque.",
+        "criteres": [
+            {"nom": "raideur de la nuque", "poids": 3},
+            {"nom": "bombement de la fontanelle", "poids": 3},
+            {"nom": "photophobie", "poids": 2},
+            {"nom": "vomissements en jet", "poids": 2},
+            {"nom": "fièvre brutale", "poids": 1}
+        ],
+        "seuil_alerte": "5 cas/100 000 hab/semaine"
+    },
+    {
+        "maladie": "Peste",
+        "definition_cas": "Fièvre avec bubon douloureux ou toux hémoptoïque.",
+        "criteres": [
+            {"nom": "adénopathie douloureuse (bubon)", "poids": 3},
+            {"nom": "toux avec crachats hémoptoïques", "poids": 3},
+            {"nom": "fièvre brutale", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Poliomyélite (PFA)",
+        "definition_cas": "Paralysie flasque aiguë non traumatique chez un enfant < 15 ans.",
+        "criteres": [
+            {"nom": "paralysie flasque aiguë", "poids": 3},
+            {"nom": "diminution du tonus", "poids": 2},
+            {"nom": "apparition brutale", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Rougeole",
+        "definition_cas": "Fièvre et éruption maculo-papuleuse avec toux ou coryza.",
+        "criteres": [
+            {"nom": "éruption maculo-papuleuse", "poids": 3},
+            {"nom": "taches de Koplik", "poids": 3},
+            {"nom": "fièvre", "poids": 1},
+            {"nom": "toux", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Rage",
+        "definition_cas": "Syndrome neurologique aigu après morsure animale.",
+        "criteres": [
+            {"nom": "hydrophobie", "poids": 3},
+            {"nom": "aérophobie", "poids": 3},
+            {"nom": "agitation", "poids": 2},
+            {"nom": "morsure/griffure animale", "poids": 2}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Tétanos néonatal",
+        "definition_cas": "Incapacité de téter entre 3 et 28 jours avec raideurs.",
+        "criteres": [
+            {"nom": "incapacité de téter", "poids": 3},
+            {"nom": "raideur du corps", "poids": 3},
+            {"nom": "spasmes musculaires", "poids": 2}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Variole",
+        "definition_cas": "Fièvre suivie d'éruption vésiculeuse/pustuleuse profonde.",
+        "criteres": [
+            {"nom": "éruption vésiculeuse profonde", "poids": 3},
+            {"nom": "pustules de même stade", "poids": 3},
+            {"nom": "fièvre élevée", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Variole du singe (Mpox)",
+        "definition_cas": "Fièvre et éruption cutanée vésiculeuse avec lymphadénopathie.",
+        "criteres": [
+            {"nom": "éruption cutanée vésiculeuse/pustuleuse", "poids": 3},
+            {"nom": "lymphadénopathie", "poids": 3},
+            {"nom": "fièvre", "poids": 1}
+        ],
+        "seuil_alerte": "1 cas suspect"
+    }
+]

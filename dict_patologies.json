@@ -1,0 +1,140 @@
+[
+    {
+        "maladie": "Charbon (Anthrax)",
+        "definition_cas": "Toute personne présentant une lésion cutanée (papule, vésicule ou escarre noire) ou une détresse respiratoire aiguë après contact avec des animaux ou produits animaux.",
+        "criteres": ["papule démangeante", "vésicule", "eschare noire", "fièvre", "oedème", "difficultés respiratoires"],
+        "seuil_alerte": "1 cas suspect (humain ou animal)"
+    },
+    {
+        "maladie": "Chikungunya",
+        "definition_cas": "Apparition brutale de fièvre élevée accompagnée de douleurs articulaires invalidantes, souvent associée à une éruption cutanée.",
+        "criteres": ["fièvre brutale", "douleurs articulaires sévères", "céphalées", "nausées", "éruption cutanée"],
+        "seuil_alerte": "Augmentation inhabituelle du nombre de cas"
+    },
+    {
+        "maladie": "Choléra",
+        "definition_cas": "Toute personne âgée de 2 ans ou plus présentant une diarrhée aqueuse aiguë sévère, avec ou sans vomissements.",
+        "criteres": ["diarrhée aqueuse profuse", "vomissements", "déshydratation sévère", "selles en eau de riz"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Dengue",
+        "definition_cas": "Fièvre élevée persistante accompagnée d'au moins deux signes parmi : céphalées, douleurs rétro-orbitaires, myalgies ou arthralgies.",
+        "criteres": ["fièvre élevée", "douleurs rétro-orbitaires", "myalgies", "arthralgies", "éruption cutanée"],
+        "seuil_alerte": "Augmentation inhabituelle du nombre de cas"
+    },
+    {
+        "maladie": "Diarrhée sanglante (Shigellose)",
+        "definition_cas": "Toute personne présentant une diarrhée avec présence de sang rouge visible dans les selles.",
+        "criteres": ["diarrhée avec sang visible", "fièvre", "ténesme", "douleurs abdominales"],
+        "seuil_alerte": "5 cas suspects par semaine dans une même localité"
+    },
+    {
+        "maladie": "Dracunculose (Ver de Guinée)",
+        "definition_cas": "Toute personne présentant ou ayant l'historique d'une lésion cutanée avec émergence d'un ver filiforme blanc.",
+        "criteres": ["lésion cutanée vésiculeuse", "émergence d'un ver blanc filiforme", "prurit localisé", "brulure cutanée"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre de la vallée du Rift",
+        "definition_cas": "Syndrome fébrile aigu accompagné de troubles de la vision ou de manifestations hémorragiques chez une personne en contact avec du bétail.",
+        "criteres": ["fièvre", "céphalées", "myalgies", "troubles de la vision", "syndrome hémorragique"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre du Nil occidental",
+        "definition_cas": "Maladie fébrile pouvant évoluer vers une atteinte neurologique grave (encéphalite ou méningite).",
+        "criteres": ["fièvre", "céphalées", "fatigue", "douleurs musculaires", "éruption cutanée", "signes de méningo-encéphalite"],
+        "seuil_alerte": "Augmentation inhabituelle du nombre de cas"
+    },
+    {
+        "maladie": "Fièvre de Crimée-Congo",
+        "definition_cas": "Apparition brutale de fièvre et de douleurs musculaires, suivie rapidement de signes hémorragiques (pétéchies, ecchymoses).",
+        "criteres": ["fièvre", "myalgies", "vertiges", "douleurs dorsales", "pétéchies", "ecchymoses"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre de Lassa",
+        "definition_cas": "Maladie fébrile aiguë d'évolution graduelle avec malaise, maux de gorge et possibles signes hémorragiques.",
+        "criteres": ["fièvre graduelle", "malaise", "céphalées", "maux de gorge", "douleurs thoraciques", "hémorragies"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre à virus Zika",
+        "definition_cas": "Fièvre modérée avec éruption cutanée, souvent accompagnée de conjonctivite ou de douleurs articulaires.",
+        "criteres": ["fièvre modérée", "éruption maculo-papuleuse", "arthralgies", "conjonctivite non purulente"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre Jaune",
+        "definition_cas": "Toute personne présentant une fièvre d'apparition brutale suivie d'un ictère (jaunisse) dans les 14 jours.",
+        "criteres": ["fièvre", "ictère (jaunisse)", "douleurs lombaires", "céphalées", "ictère dans les 14 jours"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre hémorragique Ebola",
+        "definition_cas": "Début brutal de fièvre, fatigue intense et maux de gorge, suivis de vomissements et de saignements inexpliqués.",
+        "criteres": ["fièvre brutale", "fatigue intense", "douleurs musculaires", "maux de gorge", "hémorragies internes/externes"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Fièvre hémorragique de Marbourg",
+        "definition_cas": "Fièvre élevée sévère avec céphalées et malaise profond, évoluant rapidement vers un syndrome hémorragique grave.",
+        "criteres": ["fièvre élevée", "céphalées sévères", "malaise profond", "diarrhée aqueuse", "manifestations hémorragiques"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Infection Respiratoire Aiguë (IRA)",
+        "definition_cas": "Toute personne présentant une toux ou des difficultés respiratoires avec une fièvre supérieure à 38°C.",
+        "criteres": ["toux", "difficulté respiratoire", "fièvre > 38°C", "douleur thoracique", "fréquence respiratoire élevée"],
+        "seuil_alerte": "Augmentation du nombre de cas habituels"
+    },
+    {
+        "maladie": "Méningite",
+        "definition_cas": "Toute personne présentant une fièvre brutale accompagnée d'une raideur de la nuque ou d'un bombement de la fontanelle.",
+        "criteres": ["fièvre brutale", "céphalées", "raideur de la nuque", "photophobie", "vomissements en jet"],
+        "seuil_alerte": "Seuil d'alerte spécifique (5 cas/100 000 hab/semaine)"
+    },
+    {
+        "maladie": "Peste",
+        "definition_cas": "Fièvre brutale avec présence d'un ganglion lymphatique douloureux (bubon) ou toux avec crachats sanglants.",
+        "criteres": ["fièvre brutale", "adénopathie douloureuse (bubon)", "toux avec crachats hémoptoïques", "céphalées"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Poliomyélite (PFA)",
+        "definition_cas": "Tout enfant de moins de 15 ans présentant une paralysie flasque aiguë non traumatique.",
+        "criteres": ["paralysie flasque aiguë", "apparition brutale", "absence de traumatisme", "diminution du tonus"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Rougeole",
+        "definition_cas": "Fièvre et éruption cutanée maculo-papuleuse généralisée, accompagnées de toux, coryza ou conjonctivite.",
+        "criteres": ["fièvre", "éruption maculo-papuleuse", "toux", "coryza", "conjonctivite"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Rage",
+        "definition_cas": "Toute personne présentant un syndrome neurologique aigu (agitation, hydrophobie) suite à une morsure animale.",
+        "criteres": ["fièvre", "céphalées", "hydrophobie", "aérophobie", "agitation", "spasmes musculaires", "morsure/griffure animale"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Tétanos néonatal",
+        "definition_cas": "Nouveau-né capable de téter à la naissance mais perdant cette capacité entre 3 et 28 jours avec apparition de raideurs.",
+        "criteres": ["incapacité de téter", "raideur du corps", "spasmes musculaires", "nouveau-né (3-28 jours)"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Variole",
+        "definition_cas": "Fièvre élevée suivie d'une éruption vésiculeuse ou pustuleuse profonde évoluant au même stade sur une même zone.",
+        "criteres": ["fièvre élevée", "malaise", "éruption vésiculeuse profonde", "pustules de même stade"],
+        "seuil_alerte": "1 cas suspect"
+    },
+    {
+        "maladie": "Variole du singe (Mpox)",
+        "definition_cas": "Fièvre et éruption cutanée vésiculeuse inexpliquée, souvent accompagnée de ganglions enflés (lymphadénopathie).",
+        "criteres": ["fièvre", "céphalées", "lymphadénopathie", "myalgies", "éruption cutanée vésiculeuse/pustuleuse"],
+        "seuil_alerte": "1 cas suspect"
+    }
+]

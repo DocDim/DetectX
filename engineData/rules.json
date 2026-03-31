@@ -1,0 +1,306 @@
+{
+    "metadata": {
+        "project": "Detect-X",
+        "version": "1.1",
+        "description": "Règles extraites avec support des caractères spéciaux"
+    },
+    "syndromes": [
+        {
+            "id": "S001",
+            "nom": "Charbon (Anthrax)",
+            "criteres": [
+                "lésion cutanée évoluant sur une période de 1 à 6 jours",
+                "Papule à 1 vésicule",
+                "Escarres noirâtre",
+                "oedèmes",
+                "nausées",
+                "vomissements",
+                "une anorexie",
+                "fièvre",
+                "hypoxie",
+                "dyspnée",
+                "élargissement du médiastin visible à la radiographie"
+            ]
+        },
+        {
+            "id": "S002",
+            "nom": "Chikungunya",
+            "criteres": [
+                "fièvre>38.5°C",
+                "Convuslsions",
+                "Perte de conscience",
+                "signes et symptômes méningés",
+                "arthralgie/arthrite"
+            ]
+        },
+        {
+            "id": "S003",
+            "nom": "Choléra",
+            "criteres": [
+                "vomissements",
+                "déshydratation",
+                "Diarrhée acqueuse aigue"
+            ]
+        },
+        {
+            "id": "S004",
+            "nom": "Dengue",
+            "criteres": [
+                "arthralgie/arthrite",
+                "cephalées",
+                "douleur rétro-orbitale",
+                "myalgie",
+                "éruptions cutanées",
+                "leucopenie",
+                "hemorrhagie",
+                "hematémèse",
+                "ecchymoses",
+                "Purpura",
+                "Petechies",
+                "melena",
+                "Thrombopenie"
+            ]
+        },
+        {
+            "id": "S005",
+            "nom": "Diarrhée sanglante",
+            "criteres": [
+                "Diarrhée avec presence de sang"
+            ]
+        },
+        {
+            "id": "S006",
+            "nom": "Dracunculose",
+            "criteres": [
+                "lesions cutanés",
+                "Demangeaisons",
+                "Cloque"
+            ]
+        },
+        {
+            "id": "S007",
+            "nom": "Fievre de la vallée du Rift",
+            "criteres": [
+                "oedèmes",
+                "nausées",
+                "vomissements",
+                "fièvre",
+                "Miction reduite",
+                "Diarrhée acqueuse aigue",
+                "cephalées",
+                "hemorrhagie",
+                "Petechies",
+                "Ictère",
+                "maux de dos",
+                "douleur musculaire",
+                "épuisement",
+                "sensibilité à la lumiere",
+                "Douleur abdominal",
+                "Thrombopenie",
+                "Syndrome grippal aigue",
+                "Perte de l'acuité visuel"
+            ]
+        },
+        {
+            "id": "S008",
+            "nom": "Fièvre du nil occidental",
+            "criteres": [
+                "encephalite"
+            ]
+        },
+        {
+            "id": "S009",
+            "nom": "fièvre de Crimée-Congo",
+            "criteres": [
+                "une anorexie",
+                "fièvre",
+                "Faiblesse generalisé",
+                "cephalées",
+                "hemorrhagie",
+                "Petechies",
+                "Injection de sang des conjonctives",
+                "Douleurs des membres"
+            ]
+        },
+        {
+            "id": "S010",
+            "nom": "fièvre de lassa",
+            "criteres": [
+                "nausées",
+                "vomissements",
+                "fièvre",
+                "Diarrhée acqueuse aigue",
+                "cephalées",
+                "douleur musculaire",
+                "Maux de gorge",
+                "Toux",
+                "douleur thoracique",
+                "Perte de l'audition"
+            ]
+        },
+        {
+            "id": "S011",
+            "nom": "fiévre à virus zika",
+            "criteres": [
+                "fièvre",
+                "arthralgie/arthrite",
+                "éruptions cutanées",
+                "Eruptions",
+                "conjontivite"
+            ]
+        },
+        {
+            "id": "S012",
+            "nom": "Fièvre jaune",
+            "criteres": [
+                "fièvre",
+                "cephalées",
+                "Ictère",
+                "Douleur abdominal",
+                "Maux de gorge",
+                "Toux",
+                "Constipation"
+            ]
+        },
+        {
+            "id": "S013",
+            "nom": "Fièvre hémorragique de Ebola",
+            "criteres": [
+                "vomissements",
+                "une anorexie",
+                "fièvre",
+                "Miction reduite",
+                "arthralgie/arthrite",
+                "Diarrhée avec presence de sang",
+                "hemorrhagie",
+                "Purpura",
+                "melena",
+                "Demangeaisons",
+                "douleur musculaire",
+                "Douleur abdominal",
+                "Injection de sang des conjonctives",
+                "Hematurie",
+                "Léthargie",
+                "Hoquet"
+            ]
+        },
+        {
+            "id": "S014",
+            "nom": "Fièvre hémorragique de Marbourg",
+            "criteres": [
+                "vomissements",
+                "une anorexie",
+                "fièvre",
+                "Miction reduite",
+                "arthralgie/arthrite",
+                "Diarrhée avec presence de sang",
+                "hemorrhagie",
+                "Purpura",
+                "melena",
+                "Demangeaisons",
+                "douleur musculaire",
+                "Douleur abdominal",
+                "Injection de sang des conjonctives",
+                "Hematurie",
+                "Léthargie",
+                "Hoquet"
+            ]
+        },
+        {
+            "id": "S015",
+            "nom": "IRA",
+            "criteres": [
+                "fièvre",
+                "dyspnée",
+                "Maux de gorge",
+                "Toux"
+            ]
+        },
+        {
+            "id": "S016",
+            "nom": "Méningite",
+            "criteres": [
+                "fièvre",
+                "Raideur de la nuque",
+                "Altération de la conscience"
+            ]
+        },
+        {
+            "id": "S017",
+            "nom": "Peste",
+            "criteres": [
+                "fièvre",
+                "Frissons",
+                "dyspnée",
+                "cephalées",
+                "Malaise important",
+                "Prostration",
+                "gonflement douleureux des ganglions lymphatiques",
+                "Toux avec sang",
+                "normalement pendant les 2 premiers jours de sa vie, et qui, entre le 3ième et"
+            ]
+        },
+        {
+            "id": "S018",
+            "nom": "Poliomelyte/ PFA",
+            "criteres": [
+                "Tout enfant de moins de 15 ans presentant une PFA",
+                "Toute personne souffrant de paralysie chez qui le medecin soupçonne la poliomelyte"
+            ]
+        },
+        {
+            "id": "S019",
+            "nom": "Rougeole",
+            "criteres": [
+                "fièvre",
+                "éruptions cutanées",
+                "Toux",
+                "conjontivite",
+                "Rhume",
+                "Constipation"
+            ]
+        },
+        {
+            "id": "S020",
+            "nom": "Rage",
+            "criteres": [
+                "nausées",
+                "fièvre",
+                "cephalées",
+                "sensations de picotement anormales ou douleurs à un site de morsure",
+                "Anxieté",
+                "Agitation",
+                "Hydrophobie",
+                "Douleur dans la nuque"
+            ]
+        },
+        {
+            "id": "S021",
+            "nom": "Tétanos néonatal",
+            "criteres": [
+                "Tout nouveau-né capable de pleurer et de prendre le sein"
+            ]
+        },
+        {
+            "id": "S022",
+            "nom": "Variole",
+            "criteres": [
+                "fièvre",
+                "Eruptions"
+            ]
+        },
+        {
+            "id": "S023",
+            "nom": "Variole du singe",
+            "criteres": [
+                "fièvre",
+                "cephalées",
+                "Eruptions",
+                "maux de dos",
+                "douleur musculaire",
+                "lymphoadenopathies",
+                "fatigue extreme"
+            ]
+        }
+    ]
+}

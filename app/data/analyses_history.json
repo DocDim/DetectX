@@ -1,0 +1,2663 @@
+[
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "CMA",
+            "date": "2026-02-20",
+            "patient_code": "PAT-1084",
+            "sexe": "F",
+            "age": 16
+        },
+        "symptoms_input": [
+            "rhume",
+            "fatigue légère"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "Dispensaire",
+            "date": "2026-03-06",
+            "patient_code": "PAT-1019",
+            "sexe": "F",
+            "age": 16
+        },
+        "symptoms_input": [
+            "céphalées",
+            "photophobie",
+            "fièvre brutale"
+        ],
+        "results": [
+            {
+                "maladie": "Chikungunya",
+                "definition": "Fièvre élevée brutale et douleurs articulaires invalidantes.",
+                "score": 38,
+                "symptomes_detectes": [
+                    "fièvre brutale",
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Fièvre hémorragique Ebola",
+                "definition": "Fièvre brutale, fatigue intense et hémorragies inexpliquées.",
+                "score": 29,
+                "symptomes_detectes": [
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Méningite",
+                "definition": "Fièvre brutale avec raideur de la nuque.",
+                "score": 27,
+                "symptomes_detectes": [
+                    "photophobie",
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "5 cas/100 000 hab/semaine"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Peste",
+                "definition": "Fièvre avec bubon douloureux ou toux hémoptoïque.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "CMA",
+            "date": "2026-02-21",
+            "patient_code": "PAT-1060",
+            "sexe": "F",
+            "age": 12
+        },
+        "symptoms_input": [
+            "rhume",
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Dispensaire",
+            "date": "2026-02-08",
+            "patient_code": "PAT-1041",
+            "sexe": "F",
+            "age": 23
+        },
+        "symptoms_input": [
+            "stress",
+            "insomnie",
+            "petite toux"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "CMA",
+            "date": "2026-02-06",
+            "patient_code": "PAT-1068",
+            "sexe": "F",
+            "age": 39
+        },
+        "symptoms_input": [
+            "petite toux"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "Hôpital de District",
+            "date": "2026-01-28",
+            "patient_code": "PAT-1049",
+            "sexe": "F",
+            "age": 44
+        },
+        "symptoms_input": [
+            "rhume",
+            "petite toux",
+            "fatigue légère"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Hôpital de District",
+            "date": "2026-01-04",
+            "patient_code": "PAT-1071",
+            "sexe": "M",
+            "age": 16
+        },
+        "symptoms_input": [
+            "rhume",
+            "douleur légère au bras",
+            "petite toux"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Centre de Santé",
+            "date": "2026-02-06",
+            "patient_code": "PAT-1000",
+            "sexe": "M",
+            "age": 25
+        },
+        "symptoms_input": [
+            "douleurs lombaires",
+            "ictère dans les 14 jours"
+        ],
+        "results": [
+            {
+                "maladie": "Fièvre Jaune",
+                "definition": "Fièvre brutale suivie d'un ictère dans les 14 jours.",
+                "score": 56,
+                "symptomes_detectes": [
+                    "ictère dans les 14 jours",
+                    "douleurs lombaires"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "CMA",
+            "date": "2026-01-19",
+            "patient_code": "PAT-1043",
+            "sexe": "F",
+            "age": 74
+        },
+        "symptoms_input": [
+            "insomnie",
+            "stress",
+            "douleur légère au bras"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "CMA",
+            "date": "2026-01-20",
+            "patient_code": "PAT-1044",
+            "sexe": "F",
+            "age": 73
+        },
+        "symptoms_input": [
+            "douleur légère au bras",
+            "fatigue légère"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "Dispensaire",
+            "date": "2026-01-18",
+            "patient_code": "PAT-1097",
+            "sexe": "F",
+            "age": 34
+        },
+        "symptoms_input": [
+            "rhume"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "CMA",
+            "date": "2026-01-30",
+            "patient_code": "PAT-1075",
+            "sexe": "M",
+            "age": 43
+        },
+        "symptoms_input": [
+            "stress",
+            "fatigue légère",
+            "insomnie"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "CMA",
+            "date": "2026-01-27",
+            "patient_code": "PAT-1061",
+            "sexe": "F",
+            "age": 57
+        },
+        "symptoms_input": [
+            "rhume",
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Dispensaire",
+            "date": "2026-03-11",
+            "patient_code": "PAT-1086",
+            "sexe": "F",
+            "age": 34
+        },
+        "symptoms_input": [
+            "douleur légère au bras"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "Centre de Santé",
+            "date": "2026-01-15",
+            "patient_code": "PAT-1021",
+            "sexe": "M",
+            "age": 39
+        },
+        "symptoms_input": [
+            "paralysie flasque aiguë",
+            "diminution du tonus"
+        ],
+        "results": [
+            {
+                "maladie": "Poliomyélite (PFA)",
+                "definition": "Paralysie flasque aiguë non traumatique chez un enfant < 15 ans.",
+                "score": 83,
+                "symptomes_detectes": [
+                    "paralysie flasque aiguë",
+                    "diminution du tonus"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Dispensaire",
+            "date": "2026-03-11",
+            "patient_code": "PAT-1095",
+            "sexe": "F",
+            "age": 65
+        },
+        "symptoms_input": [
+            "petite toux"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Dispensaire",
+            "date": "2026-02-12",
+            "patient_code": "PAT-1048",
+            "sexe": "M",
+            "age": 28
+        },
+        "symptoms_input": [
+            "rhume",
+            "petite toux",
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "Centre de Santé",
+            "date": "2026-02-07",
+            "patient_code": "PAT-1067",
+            "sexe": "M",
+            "age": 46
+        },
+        "symptoms_input": [
+            "fatigue légère"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Hôpital de District",
+            "date": "2026-02-14",
+            "patient_code": "PAT-1002",
+            "sexe": "F",
+            "age": 73
+        },
+        "symptoms_input": [
+            "déshydratation sévère",
+            "vomissements",
+            "diarrhée aqueuse profuse"
+        ],
+        "results": [
+            {
+                "maladie": "Choléra",
+                "definition": "Diarrhée aqueuse aiguë sévère chez une personne de 2 ans ou plus.",
+                "score": 67,
+                "symptomes_detectes": [
+                    "diarrhée aqueuse profuse",
+                    "déshydratation sévère",
+                    "vomissements"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "Centre de Santé",
+            "date": "2026-01-02",
+            "patient_code": "PAT-1055",
+            "sexe": "M",
+            "age": 16
+        },
+        "symptoms_input": [
+            "fatigue légère",
+            "petite toux",
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Hôpital de District",
+            "date": "2026-01-22",
+            "patient_code": "PAT-1069",
+            "sexe": "F",
+            "age": 1
+        },
+        "symptoms_input": [
+            "fatigue légère",
+            "douleur légère au bras",
+            "insomnie"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "Centre de Santé",
+            "date": "2026-02-14",
+            "patient_code": "PAT-1090",
+            "sexe": "F",
+            "age": 49
+        },
+        "symptoms_input": [
+            "douleur légère au bras"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "Dispensaire",
+            "date": "2026-03-19",
+            "patient_code": "PAT-1030",
+            "sexe": "M",
+            "age": 21
+        },
+        "symptoms_input": [
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Centre de Santé",
+            "date": "2026-01-04",
+            "patient_code": "PAT-1016",
+            "sexe": "M",
+            "age": 20
+        },
+        "symptoms_input": [
+            "céphalées",
+            "fièvre brutale",
+            "raideur de la nuque"
+        ],
+        "results": [
+            {
+                "maladie": "Chikungunya",
+                "definition": "Fièvre élevée brutale et douleurs articulaires invalidantes.",
+                "score": 38,
+                "symptomes_detectes": [
+                    "fièvre brutale",
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Méningite",
+                "definition": "Fièvre brutale avec raideur de la nuque.",
+                "score": 36,
+                "symptomes_detectes": [
+                    "raideur de la nuque",
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "5 cas/100 000 hab/semaine"
+            },
+            {
+                "maladie": "Fièvre hémorragique Ebola",
+                "definition": "Fièvre brutale, fatigue intense et hémorragies inexpliquées.",
+                "score": 29,
+                "symptomes_detectes": [
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Peste",
+                "definition": "Fièvre avec bubon douloureux ou toux hémoptoïque.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "CMA",
+            "date": "2026-01-17",
+            "patient_code": "PAT-1092",
+            "sexe": "M",
+            "age": 33
+        },
+        "symptoms_input": [
+            "fatigue légère"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "Hôpital de District",
+            "date": "2026-02-03",
+            "patient_code": "PAT-1053",
+            "sexe": "F",
+            "age": 15
+        },
+        "symptoms_input": [
+            "petite toux",
+            "insomnie",
+            "douleur légère au bras"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Dispensaire",
+            "date": "2026-01-26",
+            "patient_code": "PAT-1020",
+            "sexe": "M",
+            "age": 71
+        },
+        "symptoms_input": [
+            "diarrhée aqueuse profuse",
+            "déshydratation sévère",
+            "selles en eau de riz"
+        ],
+        "results": [
+            {
+                "maladie": "Choléra",
+                "definition": "Diarrhée aqueuse aiguë sévère chez une personne de 2 ans ou plus.",
+                "score": 89,
+                "symptomes_detectes": [
+                    "diarrhée aqueuse profuse",
+                    "selles en eau de riz",
+                    "déshydratation sévère"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Dispensaire",
+            "date": "2026-03-08",
+            "patient_code": "PAT-1070",
+            "sexe": "F",
+            "age": 55
+        },
+        "symptoms_input": [
+            "fatigue légère"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Dispensaire",
+            "date": "2026-02-11",
+            "patient_code": "PAT-1014",
+            "sexe": "M",
+            "age": 72
+        },
+        "symptoms_input": [
+            "céphalées",
+            "raideur de la nuque"
+        ],
+        "results": [
+            {
+                "maladie": "Méningite",
+                "definition": "Fièvre brutale avec raideur de la nuque.",
+                "score": 27,
+                "symptomes_detectes": [
+                    "raideur de la nuque"
+                ],
+                "seuil_alerte": "5 cas/100 000 hab/semaine"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Chikungunya",
+                "definition": "Fièvre élevée brutale et douleurs articulaires invalidantes.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Centre de Santé",
+            "date": "2026-01-14",
+            "patient_code": "PAT-1052",
+            "sexe": "F",
+            "age": 5
+        },
+        "symptoms_input": [
+            "insomnie",
+            "fatigue légère"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "CMA",
+            "date": "2026-02-04",
+            "patient_code": "PAT-1040",
+            "sexe": "M",
+            "age": 62
+        },
+        "symptoms_input": [
+            "petite toux",
+            "douleur légère au bras"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Dispensaire",
+            "date": "2026-02-27",
+            "patient_code": "PAT-1091",
+            "sexe": "M",
+            "age": 2
+        },
+        "symptoms_input": [
+            "fatigue légère",
+            "insomnie"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Hôpital de District",
+            "date": "2026-03-14",
+            "patient_code": "PAT-1028",
+            "sexe": "M",
+            "age": 50
+        },
+        "symptoms_input": [
+            "déshydratation sévère",
+            "selles en eau de riz",
+            "vomissements",
+            "diarrhée aqueuse profuse"
+        ],
+        "results": [
+            {
+                "maladie": "Choléra",
+                "definition": "Diarrhée aqueuse aiguë sévère chez une personne de 2 ans ou plus.",
+                "score": 100,
+                "symptomes_detectes": [
+                    "diarrhée aqueuse profuse",
+                    "selles en eau de riz",
+                    "déshydratation sévère",
+                    "vomissements"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "Dispensaire",
+            "date": "2026-02-16",
+            "patient_code": "PAT-1031",
+            "sexe": "F",
+            "age": 22
+        },
+        "symptoms_input": [
+            "insomnie"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "Hôpital de District",
+            "date": "2026-01-04",
+            "patient_code": "PAT-1059",
+            "sexe": "M",
+            "age": 2
+        },
+        "symptoms_input": [
+            "stress",
+            "rhume",
+            "douleur légère au bras"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "CMA",
+            "date": "2026-03-20",
+            "patient_code": "PAT-1027",
+            "sexe": "F",
+            "age": 51
+        },
+        "symptoms_input": [
+            "apparition brutale",
+            "paralysie flasque aiguë"
+        ],
+        "results": [
+            {
+                "maladie": "Poliomyélite (PFA)",
+                "definition": "Paralysie flasque aiguë non traumatique chez un enfant < 15 ans.",
+                "score": 67,
+                "symptomes_detectes": [
+                    "paralysie flasque aiguë",
+                    "apparition brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "Dispensaire",
+            "date": "2026-02-18",
+            "patient_code": "PAT-1085",
+            "sexe": "F",
+            "age": 38
+        },
+        "symptoms_input": [
+            "fatigue légère"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Centre de Santé",
+            "date": "2026-03-01",
+            "patient_code": "PAT-1077",
+            "sexe": "F",
+            "age": 53
+        },
+        "symptoms_input": [
+            "rhume",
+            "douleur légère au bras"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Centre de Santé",
+            "date": "2026-01-21",
+            "patient_code": "PAT-1083",
+            "sexe": "M",
+            "age": 14
+        },
+        "symptoms_input": [
+            "douleur légère au bras",
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "CMA",
+            "date": "2026-02-08",
+            "patient_code": "PAT-1094",
+            "sexe": "M",
+            "age": 16
+        },
+        "symptoms_input": [
+            "douleur légère au bras",
+            "rhume",
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Dispensaire",
+            "date": "2026-01-29",
+            "patient_code": "PAT-1011",
+            "sexe": "M",
+            "age": 1
+        },
+        "symptoms_input": [
+            "selles en eau de riz",
+            "diarrhée aqueuse profuse",
+            "déshydratation sévère"
+        ],
+        "results": [
+            {
+                "maladie": "Choléra",
+                "definition": "Diarrhée aqueuse aiguë sévère chez une personne de 2 ans ou plus.",
+                "score": 89,
+                "symptomes_detectes": [
+                    "diarrhée aqueuse profuse",
+                    "selles en eau de riz",
+                    "déshydratation sévère"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "Centre de Santé",
+            "date": "2026-02-03",
+            "patient_code": "PAT-1001",
+            "sexe": "M",
+            "age": 32
+        },
+        "symptoms_input": [
+            "ictère (jaunisse)",
+            "fièvre",
+            "ictère dans les 14 jours"
+        ],
+        "results": [
+            {
+                "maladie": "Fièvre Jaune",
+                "definition": "Fièvre brutale suivie d'un ictère dans les 14 jours.",
+                "score": 78,
+                "symptomes_detectes": [
+                    "ictère (jaunisse)",
+                    "ictère dans les 14 jours",
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Diarrhée sanglante (Shigellose)",
+                "definition": "Diarrhée avec présence de sang rouge visible dans les selles.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "5 cas suspects/semaine/localité"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Variole du singe (Mpox)",
+                "definition": "Fièvre et éruption cutanée vésiculeuse avec lymphadénopathie.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de Crimée-Congo",
+                "definition": "Fièvre brutale et myalgies suivies de signes hémorragiques.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Rougeole",
+                "definition": "Fièvre et éruption maculo-papuleuse avec toux ou coryza.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de la vallée du Rift",
+                "definition": "Fièvre avec troubles de la vision ou manifestations hémorragiques.",
+                "score": 11,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Charbon (Anthrax)",
+                "definition": "Lésion cutanée (papule, vésicule ou escarre noire) ou détresse respiratoire aiguë après contact avec des animaux.",
+                "score": 10,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Hôpital de District",
+            "date": "2026-03-10",
+            "patient_code": "PAT-1034",
+            "sexe": "F",
+            "age": 19
+        },
+        "symptoms_input": [
+            "stress",
+            "petite toux"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "CMA",
+            "date": "2026-03-12",
+            "patient_code": "PAT-1026",
+            "sexe": "F",
+            "age": 61
+        },
+        "symptoms_input": [
+            "fièvre brutale",
+            "raideur de la nuque",
+            "céphalées"
+        ],
+        "results": [
+            {
+                "maladie": "Chikungunya",
+                "definition": "Fièvre élevée brutale et douleurs articulaires invalidantes.",
+                "score": 38,
+                "symptomes_detectes": [
+                    "fièvre brutale",
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Méningite",
+                "definition": "Fièvre brutale avec raideur de la nuque.",
+                "score": 36,
+                "symptomes_detectes": [
+                    "raideur de la nuque",
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "5 cas/100 000 hab/semaine"
+            },
+            {
+                "maladie": "Fièvre hémorragique Ebola",
+                "definition": "Fièvre brutale, fatigue intense et hémorragies inexpliquées.",
+                "score": 29,
+                "symptomes_detectes": [
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Peste",
+                "definition": "Fièvre avec bubon douloureux ou toux hémoptoïque.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Centre de Santé",
+            "date": "2026-02-16",
+            "patient_code": "PAT-1039",
+            "sexe": "M",
+            "age": 36
+        },
+        "symptoms_input": [
+            "insomnie",
+            "rhume"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Centre de Santé",
+            "date": "2026-02-07",
+            "patient_code": "PAT-1082",
+            "sexe": "M",
+            "age": 33
+        },
+        "symptoms_input": [
+            "petite toux"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Dispensaire",
+            "date": "2026-03-22",
+            "patient_code": "PAT-1057",
+            "sexe": "F",
+            "age": 12
+        },
+        "symptoms_input": [
+            "insomnie",
+            "douleur légère au bras"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "Hôpital de District",
+            "date": "2026-03-14",
+            "patient_code": "PAT-1024",
+            "sexe": "M",
+            "age": 29
+        },
+        "symptoms_input": [
+            "douleurs lombaires",
+            "ictère dans les 14 jours",
+            "fièvre",
+            "ictère (jaunisse)"
+        ],
+        "results": [
+            {
+                "maladie": "Fièvre Jaune",
+                "definition": "Fièvre brutale suivie d'un ictère dans les 14 jours.",
+                "score": 100,
+                "symptomes_detectes": [
+                    "ictère (jaunisse)",
+                    "ictère dans les 14 jours",
+                    "douleurs lombaires",
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Diarrhée sanglante (Shigellose)",
+                "definition": "Diarrhée avec présence de sang rouge visible dans les selles.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "5 cas suspects/semaine/localité"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Variole du singe (Mpox)",
+                "definition": "Fièvre et éruption cutanée vésiculeuse avec lymphadénopathie.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de Crimée-Congo",
+                "definition": "Fièvre brutale et myalgies suivies de signes hémorragiques.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Rougeole",
+                "definition": "Fièvre et éruption maculo-papuleuse avec toux ou coryza.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de la vallée du Rift",
+                "definition": "Fièvre avec troubles de la vision ou manifestations hémorragiques.",
+                "score": 11,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Charbon (Anthrax)",
+                "definition": "Lésion cutanée (papule, vésicule ou escarre noire) ou détresse respiratoire aiguë après contact avec des animaux.",
+                "score": 10,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Centre de Santé",
+            "date": "2026-01-26",
+            "patient_code": "PAT-1005",
+            "sexe": "F",
+            "age": 11
+        },
+        "symptoms_input": [
+            "douleurs lombaires",
+            "fièvre",
+            "ictère dans les 14 jours"
+        ],
+        "results": [
+            {
+                "maladie": "Fièvre Jaune",
+                "definition": "Fièvre brutale suivie d'un ictère dans les 14 jours.",
+                "score": 67,
+                "symptomes_detectes": [
+                    "ictère dans les 14 jours",
+                    "douleurs lombaires",
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Diarrhée sanglante (Shigellose)",
+                "definition": "Diarrhée avec présence de sang rouge visible dans les selles.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "5 cas suspects/semaine/localité"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Variole du singe (Mpox)",
+                "definition": "Fièvre et éruption cutanée vésiculeuse avec lymphadénopathie.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de Crimée-Congo",
+                "definition": "Fièvre brutale et myalgies suivies de signes hémorragiques.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Rougeole",
+                "definition": "Fièvre et éruption maculo-papuleuse avec toux ou coryza.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de la vallée du Rift",
+                "definition": "Fièvre avec troubles de la vision ou manifestations hémorragiques.",
+                "score": 11,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Charbon (Anthrax)",
+                "definition": "Lésion cutanée (papule, vésicule ou escarre noire) ou détresse respiratoire aiguë après contact avec des animaux.",
+                "score": 10,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "Dispensaire",
+            "date": "2026-03-13",
+            "patient_code": "PAT-1076",
+            "sexe": "M",
+            "age": 9
+        },
+        "symptoms_input": [
+            "fatigue légère",
+            "insomnie",
+            "rhume"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Centre de Santé",
+            "date": "2026-01-25",
+            "patient_code": "PAT-1072",
+            "sexe": "F",
+            "age": 49
+        },
+        "symptoms_input": [
+            "douleur légère au bras",
+            "rhume"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "Centre de Santé",
+            "date": "2026-02-01",
+            "patient_code": "PAT-1056",
+            "sexe": "M",
+            "age": 70
+        },
+        "symptoms_input": [
+            "petite toux",
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "CMA",
+            "date": "2026-03-07",
+            "patient_code": "PAT-1018",
+            "sexe": "M",
+            "age": 12
+        },
+        "symptoms_input": [
+            "ictère (jaunisse)",
+            "fièvre",
+            "ictère dans les 14 jours"
+        ],
+        "results": [
+            {
+                "maladie": "Fièvre Jaune",
+                "definition": "Fièvre brutale suivie d'un ictère dans les 14 jours.",
+                "score": 78,
+                "symptomes_detectes": [
+                    "ictère (jaunisse)",
+                    "ictère dans les 14 jours",
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Diarrhée sanglante (Shigellose)",
+                "definition": "Diarrhée avec présence de sang rouge visible dans les selles.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "5 cas suspects/semaine/localité"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Variole du singe (Mpox)",
+                "definition": "Fièvre et éruption cutanée vésiculeuse avec lymphadénopathie.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de Crimée-Congo",
+                "definition": "Fièvre brutale et myalgies suivies de signes hémorragiques.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Rougeole",
+                "definition": "Fièvre et éruption maculo-papuleuse avec toux ou coryza.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de la vallée du Rift",
+                "definition": "Fièvre avec troubles de la vision ou manifestations hémorragiques.",
+                "score": 11,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Charbon (Anthrax)",
+                "definition": "Lésion cutanée (papule, vésicule ou escarre noire) ou détresse respiratoire aiguë après contact avec des animaux.",
+                "score": 10,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Dispensaire",
+            "date": "2026-03-07",
+            "patient_code": "PAT-1042",
+            "sexe": "F",
+            "age": 60
+        },
+        "symptoms_input": [
+            "fatigue légère",
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Centre de Santé",
+            "date": "2026-02-02",
+            "patient_code": "PAT-1035",
+            "sexe": "F",
+            "age": 65
+        },
+        "symptoms_input": [
+            "rhume"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "CMA",
+            "date": "2026-03-03",
+            "patient_code": "PAT-1051",
+            "sexe": "F",
+            "age": 17
+        },
+        "symptoms_input": [
+            "insomnie",
+            "douleur légère au bras",
+            "rhume"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "CMA",
+            "date": "2026-01-05",
+            "patient_code": "PAT-1050",
+            "sexe": "F",
+            "age": 18
+        },
+        "symptoms_input": [
+            "insomnie",
+            "rhume"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "CMA",
+            "date": "2026-02-17",
+            "patient_code": "PAT-1004",
+            "sexe": "F",
+            "age": 32
+        },
+        "symptoms_input": [
+            "photophobie",
+            "céphalées",
+            "fièvre brutale",
+            "raideur de la nuque"
+        ],
+        "results": [
+            {
+                "maladie": "Méningite",
+                "definition": "Fièvre brutale avec raideur de la nuque.",
+                "score": 55,
+                "symptomes_detectes": [
+                    "raideur de la nuque",
+                    "photophobie",
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "5 cas/100 000 hab/semaine"
+            },
+            {
+                "maladie": "Chikungunya",
+                "definition": "Fièvre élevée brutale et douleurs articulaires invalidantes.",
+                "score": 38,
+                "symptomes_detectes": [
+                    "fièvre brutale",
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Fièvre hémorragique Ebola",
+                "definition": "Fièvre brutale, fatigue intense et hémorragies inexpliquées.",
+                "score": 29,
+                "symptomes_detectes": [
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Peste",
+                "definition": "Fièvre avec bubon douloureux ou toux hémoptoïque.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Centre de Santé",
+            "date": "2026-03-09",
+            "patient_code": "PAT-1096",
+            "sexe": "F",
+            "age": 63
+        },
+        "symptoms_input": [
+            "fatigue légère",
+            "insomnie"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "Dispensaire",
+            "date": "2026-01-26",
+            "patient_code": "PAT-1065",
+            "sexe": "F",
+            "age": 18
+        },
+        "symptoms_input": [
+            "insomnie"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "CMA",
+            "date": "2026-01-31",
+            "patient_code": "PAT-1010",
+            "sexe": "F",
+            "age": 47
+        },
+        "symptoms_input": [
+            "apparition brutale",
+            "paralysie flasque aiguë"
+        ],
+        "results": [
+            {
+                "maladie": "Poliomyélite (PFA)",
+                "definition": "Paralysie flasque aiguë non traumatique chez un enfant < 15 ans.",
+                "score": 67,
+                "symptomes_detectes": [
+                    "paralysie flasque aiguë",
+                    "apparition brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Dispensaire",
+            "date": "2026-02-18",
+            "patient_code": "PAT-1089",
+            "sexe": "F",
+            "age": 29
+        },
+        "symptoms_input": [
+            "petite toux"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Dispensaire",
+            "date": "2026-01-10",
+            "patient_code": "PAT-1037",
+            "sexe": "M",
+            "age": 72
+        },
+        "symptoms_input": [
+            "fatigue légère",
+            "insomnie",
+            "rhume"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "CMA",
+            "date": "2026-02-18",
+            "patient_code": "PAT-1088",
+            "sexe": "F",
+            "age": 13
+        },
+        "symptoms_input": [
+            "douleur légère au bras"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Hôpital de District",
+            "date": "2026-02-17",
+            "patient_code": "PAT-1033",
+            "sexe": "F",
+            "age": 2
+        },
+        "symptoms_input": [
+            "rhume"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Hôpital de District",
+            "date": "2026-02-10",
+            "patient_code": "PAT-1064",
+            "sexe": "F",
+            "age": 62
+        },
+        "symptoms_input": [
+            "douleur légère au bras",
+            "rhume"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "CMA",
+            "date": "2026-02-16",
+            "patient_code": "PAT-1073",
+            "sexe": "M",
+            "age": 63
+        },
+        "symptoms_input": [
+            "insomnie",
+            "stress",
+            "petite toux"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Dispensaire",
+            "date": "2026-03-02",
+            "patient_code": "PAT-1032",
+            "sexe": "M",
+            "age": 31
+        },
+        "symptoms_input": [
+            "douleur légère au bras",
+            "insomnie",
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Hôpital de District",
+            "date": "2026-03-15",
+            "patient_code": "PAT-1079",
+            "sexe": "F",
+            "age": 22
+        },
+        "symptoms_input": [
+            "petite toux",
+            "rhume"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Hôpital de District",
+            "date": "2026-03-14",
+            "patient_code": "PAT-1006",
+            "sexe": "M",
+            "age": 10
+        },
+        "symptoms_input": [
+            "fièvre brutale",
+            "raideur de la nuque",
+            "photophobie",
+            "céphalées"
+        ],
+        "results": [
+            {
+                "maladie": "Méningite",
+                "definition": "Fièvre brutale avec raideur de la nuque.",
+                "score": 55,
+                "symptomes_detectes": [
+                    "raideur de la nuque",
+                    "photophobie",
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "5 cas/100 000 hab/semaine"
+            },
+            {
+                "maladie": "Chikungunya",
+                "definition": "Fièvre élevée brutale et douleurs articulaires invalidantes.",
+                "score": 38,
+                "symptomes_detectes": [
+                    "fièvre brutale",
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Fièvre hémorragique Ebola",
+                "definition": "Fièvre brutale, fatigue intense et hémorragies inexpliquées.",
+                "score": 29,
+                "symptomes_detectes": [
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Peste",
+                "definition": "Fièvre avec bubon douloureux ou toux hémoptoïque.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Dispensaire",
+            "date": "2026-02-15",
+            "patient_code": "PAT-1009",
+            "sexe": "M",
+            "age": 44
+        },
+        "symptoms_input": [
+            "photophobie",
+            "céphalées"
+        ],
+        "results": [
+            {
+                "maladie": "Méningite",
+                "definition": "Fièvre brutale avec raideur de la nuque.",
+                "score": 18,
+                "symptomes_detectes": [
+                    "photophobie"
+                ],
+                "seuil_alerte": "5 cas/100 000 hab/semaine"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Chikungunya",
+                "definition": "Fièvre élevée brutale et douleurs articulaires invalidantes.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "CMA",
+            "date": "2026-01-20",
+            "patient_code": "PAT-1003",
+            "sexe": "F",
+            "age": 43
+        },
+        "symptoms_input": [
+            "vomissements",
+            "diarrhée aqueuse profuse",
+            "déshydratation sévère"
+        ],
+        "results": [
+            {
+                "maladie": "Choléra",
+                "definition": "Diarrhée aqueuse aiguë sévère chez une personne de 2 ans ou plus.",
+                "score": 67,
+                "symptomes_detectes": [
+                    "diarrhée aqueuse profuse",
+                    "déshydratation sévère",
+                    "vomissements"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Hôpital de District",
+            "date": "2026-03-14",
+            "patient_code": "PAT-1036",
+            "sexe": "F",
+            "age": 63
+        },
+        "symptoms_input": [
+            "douleur légère au bras",
+            "insomnie"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "CMA",
+            "date": "2026-03-15",
+            "patient_code": "PAT-1023",
+            "sexe": "M",
+            "age": 10
+        },
+        "symptoms_input": [
+            "céphalées",
+            "raideur de la nuque",
+            "photophobie"
+        ],
+        "results": [
+            {
+                "maladie": "Méningite",
+                "definition": "Fièvre brutale avec raideur de la nuque.",
+                "score": 45,
+                "symptomes_detectes": [
+                    "raideur de la nuque",
+                    "photophobie"
+                ],
+                "seuil_alerte": "5 cas/100 000 hab/semaine"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Chikungunya",
+                "definition": "Fièvre élevée brutale et douleurs articulaires invalidantes.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "CMA",
+            "date": "2026-02-22",
+            "patient_code": "PAT-1013",
+            "sexe": "F",
+            "age": 43
+        },
+        "symptoms_input": [
+            "fièvre",
+            "ictère dans les 14 jours"
+        ],
+        "results": [
+            {
+                "maladie": "Fièvre Jaune",
+                "definition": "Fièvre brutale suivie d'un ictère dans les 14 jours.",
+                "score": 44,
+                "symptomes_detectes": [
+                    "ictère dans les 14 jours",
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Diarrhée sanglante (Shigellose)",
+                "definition": "Diarrhée avec présence de sang rouge visible dans les selles.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "5 cas suspects/semaine/localité"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Variole du singe (Mpox)",
+                "definition": "Fièvre et éruption cutanée vésiculeuse avec lymphadénopathie.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de Crimée-Congo",
+                "definition": "Fièvre brutale et myalgies suivies de signes hémorragiques.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Rougeole",
+                "definition": "Fièvre et éruption maculo-papuleuse avec toux ou coryza.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de la vallée du Rift",
+                "definition": "Fièvre avec troubles de la vision ou manifestations hémorragiques.",
+                "score": 11,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Charbon (Anthrax)",
+                "definition": "Lésion cutanée (papule, vésicule ou escarre noire) ou détresse respiratoire aiguë après contact avec des animaux.",
+                "score": 10,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Dispensaire",
+            "date": "2026-01-17",
+            "patient_code": "PAT-1046",
+            "sexe": "F",
+            "age": 53
+        },
+        "symptoms_input": [
+            "rhume",
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Dispensaire",
+            "date": "2026-02-05",
+            "patient_code": "PAT-1017",
+            "sexe": "M",
+            "age": 13
+        },
+        "symptoms_input": [
+            "selles en eau de riz",
+            "diarrhée aqueuse profuse",
+            "déshydratation sévère"
+        ],
+        "results": [
+            {
+                "maladie": "Choléra",
+                "definition": "Diarrhée aqueuse aiguë sévère chez une personne de 2 ans ou plus.",
+                "score": 89,
+                "symptomes_detectes": [
+                    "diarrhée aqueuse profuse",
+                    "selles en eau de riz",
+                    "déshydratation sévère"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Centre de Santé",
+            "date": "2026-03-02",
+            "patient_code": "PAT-1025",
+            "sexe": "F",
+            "age": 8
+        },
+        "symptoms_input": [
+            "ictère (jaunisse)",
+            "ictère dans les 14 jours",
+            "fièvre"
+        ],
+        "results": [
+            {
+                "maladie": "Fièvre Jaune",
+                "definition": "Fièvre brutale suivie d'un ictère dans les 14 jours.",
+                "score": 78,
+                "symptomes_detectes": [
+                    "ictère (jaunisse)",
+                    "ictère dans les 14 jours",
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Diarrhée sanglante (Shigellose)",
+                "definition": "Diarrhée avec présence de sang rouge visible dans les selles.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "5 cas suspects/semaine/localité"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Variole du singe (Mpox)",
+                "definition": "Fièvre et éruption cutanée vésiculeuse avec lymphadénopathie.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de Crimée-Congo",
+                "definition": "Fièvre brutale et myalgies suivies de signes hémorragiques.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Rougeole",
+                "definition": "Fièvre et éruption maculo-papuleuse avec toux ou coryza.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de la vallée du Rift",
+                "definition": "Fièvre avec troubles de la vision ou manifestations hémorragiques.",
+                "score": 11,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Charbon (Anthrax)",
+                "definition": "Lésion cutanée (papule, vésicule ou escarre noire) ou détresse respiratoire aiguë après contact avec des animaux.",
+                "score": 10,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Dispensaire",
+            "date": "2026-01-18",
+            "patient_code": "PAT-1008",
+            "sexe": "M",
+            "age": 49
+        },
+        "symptoms_input": [
+            "fièvre brutale",
+            "raideur de la nuque",
+            "céphalées"
+        ],
+        "results": [
+            {
+                "maladie": "Chikungunya",
+                "definition": "Fièvre élevée brutale et douleurs articulaires invalidantes.",
+                "score": 38,
+                "symptomes_detectes": [
+                    "fièvre brutale",
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Méningite",
+                "definition": "Fièvre brutale avec raideur de la nuque.",
+                "score": 36,
+                "symptomes_detectes": [
+                    "raideur de la nuque",
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "5 cas/100 000 hab/semaine"
+            },
+            {
+                "maladie": "Fièvre hémorragique Ebola",
+                "definition": "Fièvre brutale, fatigue intense et hémorragies inexpliquées.",
+                "score": 29,
+                "symptomes_detectes": [
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "céphalées"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Peste",
+                "definition": "Fièvre avec bubon douloureux ou toux hémoptoïque.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre brutale"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "Dispensaire",
+            "date": "2026-01-12",
+            "patient_code": "PAT-1080",
+            "sexe": "F",
+            "age": 4
+        },
+        "symptoms_input": [
+            "douleur légère au bras",
+            "petite toux",
+            "fatigue légère"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "Dispensaire",
+            "date": "2026-02-03",
+            "patient_code": "PAT-1054",
+            "sexe": "F",
+            "age": 9
+        },
+        "symptoms_input": [
+            "insomnie"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "Centre de Santé",
+            "date": "2026-03-21",
+            "patient_code": "PAT-1063",
+            "sexe": "M",
+            "age": 40
+        },
+        "symptoms_input": [
+            "rhume",
+            "fatigue légère",
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "Hôpital de District",
+            "date": "2026-01-01",
+            "patient_code": "PAT-1081",
+            "sexe": "M",
+            "age": 29
+        },
+        "symptoms_input": [
+            "douleur légère au bras",
+            "fatigue légère"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Hôpital de District",
+            "date": "2026-02-16",
+            "patient_code": "PAT-1047",
+            "sexe": "M",
+            "age": 3
+        },
+        "symptoms_input": [
+            "rhume",
+            "petite toux"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Dispensaire",
+            "date": "2026-03-09",
+            "patient_code": "PAT-1087",
+            "sexe": "M",
+            "age": 30
+        },
+        "symptoms_input": [
+            "stress",
+            "fatigue légère",
+            "petite toux"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "Centre de Santé",
+            "date": "2026-01-18",
+            "patient_code": "PAT-1045",
+            "sexe": "F",
+            "age": 66
+        },
+        "symptoms_input": [
+            "petite toux"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "Centre de Santé",
+            "date": "2026-01-31",
+            "patient_code": "PAT-1078",
+            "sexe": "F",
+            "age": 8
+        },
+        "symptoms_input": [
+            "insomnie"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Centre de Santé",
+            "date": "2026-01-02",
+            "patient_code": "PAT-1012",
+            "sexe": "M",
+            "age": 19
+        },
+        "symptoms_input": [
+            "éruption maculo-papuleuse",
+            "fièvre"
+        ],
+        "results": [
+            {
+                "maladie": "Rougeole",
+                "definition": "Fièvre et éruption maculo-papuleuse avec toux ou coryza.",
+                "score": 50,
+                "symptomes_detectes": [
+                    "éruption maculo-papuleuse",
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre à virus Zika",
+                "definition": "Fièvre modérée avec éruption maculo-papuleuse et conjonctivite.",
+                "score": 25,
+                "symptomes_detectes": [
+                    "éruption maculo-papuleuse"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Diarrhée sanglante (Shigellose)",
+                "definition": "Diarrhée avec présence de sang rouge visible dans les selles.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "5 cas suspects/semaine/localité"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Variole du singe (Mpox)",
+                "definition": "Fièvre et éruption cutanée vésiculeuse avec lymphadénopathie.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de Crimée-Congo",
+                "definition": "Fièvre brutale et myalgies suivies de signes hémorragiques.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de la vallée du Rift",
+                "definition": "Fièvre avec troubles de la vision ou manifestations hémorragiques.",
+                "score": 11,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre Jaune",
+                "definition": "Fièvre brutale suivie d'un ictère dans les 14 jours.",
+                "score": 11,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Charbon (Anthrax)",
+                "definition": "Lésion cutanée (papule, vésicule ou escarre noire) ou détresse respiratoire aiguë après contact avec des animaux.",
+                "score": 10,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Centre de Santé",
+            "date": "2026-03-13",
+            "patient_code": "PAT-1007",
+            "sexe": "F",
+            "age": 46
+        },
+        "symptoms_input": [
+            "selles en eau de riz",
+            "diarrhée aqueuse profuse"
+        ],
+        "results": [
+            {
+                "maladie": "Choléra",
+                "definition": "Diarrhée aqueuse aiguë sévère chez une personne de 2 ans ou plus.",
+                "score": 67,
+                "symptomes_detectes": [
+                    "diarrhée aqueuse profuse",
+                    "selles en eau de riz"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Centre de Santé",
+            "date": "2026-02-11",
+            "patient_code": "PAT-1074",
+            "sexe": "F",
+            "age": 28
+        },
+        "symptoms_input": [
+            "petite toux",
+            "stress",
+            "douleur légère au bras"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "Dispensaire",
+            "date": "2026-02-21",
+            "patient_code": "PAT-1098",
+            "sexe": "F",
+            "age": 23
+        },
+        "symptoms_input": [
+            "fatigue légère"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Yaoundé I",
+            "fosa": "Dispensaire",
+            "date": "2026-02-26",
+            "patient_code": "PAT-1029",
+            "sexe": "M",
+            "age": 61
+        },
+        "symptoms_input": [
+            "ictère dans les 14 jours",
+            "douleurs lombaires"
+        ],
+        "results": [
+            {
+                "maladie": "Fièvre Jaune",
+                "definition": "Fièvre brutale suivie d'un ictère dans les 14 jours.",
+                "score": 56,
+                "symptomes_detectes": [
+                    "ictère dans les 14 jours",
+                    "douleurs lombaires"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "Hôpital de District",
+            "date": "2026-02-13",
+            "patient_code": "PAT-1058",
+            "sexe": "F",
+            "age": 23
+        },
+        "symptoms_input": [
+            "fatigue légère"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "Dispensaire",
+            "date": "2026-01-10",
+            "patient_code": "PAT-1022",
+            "sexe": "M",
+            "age": 43
+        },
+        "symptoms_input": [
+            "diminution du tonus",
+            "paralysie flasque aiguë"
+        ],
+        "results": [
+            {
+                "maladie": "Poliomyélite (PFA)",
+                "definition": "Paralysie flasque aiguë non traumatique chez un enfant < 15 ans.",
+                "score": 83,
+                "symptomes_detectes": [
+                    "paralysie flasque aiguë",
+                    "diminution du tonus"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "Dispensaire",
+            "date": "2026-02-25",
+            "patient_code": "PAT-1038",
+            "sexe": "F",
+            "age": 1
+        },
+        "symptoms_input": [
+            "insomnie",
+            "fatigue légère"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bafoussam",
+            "fosa": "Centre de Santé",
+            "date": "2026-03-15",
+            "patient_code": "PAT-1015",
+            "sexe": "F",
+            "age": 60
+        },
+        "symptoms_input": [
+            "conjonctivite",
+            "éruption maculo-papuleuse",
+            "fièvre"
+        ],
+        "results": [
+            {
+                "maladie": "Rougeole",
+                "definition": "Fièvre et éruption maculo-papuleuse avec toux ou coryza.",
+                "score": 50,
+                "symptomes_detectes": [
+                    "éruption maculo-papuleuse",
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre à virus Zika",
+                "definition": "Fièvre modérée avec éruption maculo-papuleuse et conjonctivite.",
+                "score": 25,
+                "symptomes_detectes": [
+                    "éruption maculo-papuleuse"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Diarrhée sanglante (Shigellose)",
+                "definition": "Diarrhée avec présence de sang rouge visible dans les selles.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "5 cas suspects/semaine/localité"
+            },
+            {
+                "maladie": "Fièvre du Nil occidental",
+                "definition": "Syndrome fébrile pouvant évoluer vers une méningo-encéphalite.",
+                "score": 17,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "Augmentation inhabituelle"
+            },
+            {
+                "maladie": "Variole du singe (Mpox)",
+                "definition": "Fièvre et éruption cutanée vésiculeuse avec lymphadénopathie.",
+                "score": 14,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de Crimée-Congo",
+                "definition": "Fièvre brutale et myalgies suivies de signes hémorragiques.",
+                "score": 12,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre de la vallée du Rift",
+                "definition": "Fièvre avec troubles de la vision ou manifestations hémorragiques.",
+                "score": 11,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Fièvre Jaune",
+                "definition": "Fièvre brutale suivie d'un ictère dans les 14 jours.",
+                "score": 11,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            },
+            {
+                "maladie": "Charbon (Anthrax)",
+                "definition": "Lésion cutanée (papule, vésicule ou escarre noire) ou détresse respiratoire aiguë après contact avec des animaux.",
+                "score": 10,
+                "symptomes_detectes": [
+                    "fièvre"
+                ],
+                "seuil_alerte": "1 cas suspect"
+            }
+        ]
+    },
+    {
+        "metadata": {
+            "district": "Maroua",
+            "fosa": "CMA",
+            "date": "2026-01-03",
+            "patient_code": "PAT-1093",
+            "sexe": "F",
+            "age": 18
+        },
+        "symptoms_input": [
+            "petite toux",
+            "insomnie",
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Douala IV",
+            "fosa": "CMA",
+            "date": "2026-03-19",
+            "patient_code": "PAT-1062",
+            "sexe": "M",
+            "age": 74
+        },
+        "symptoms_input": [
+            "fatigue légère",
+            "stress"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Garoua",
+            "fosa": "Hôpital de District",
+            "date": "2026-02-07",
+            "patient_code": "PAT-1099",
+            "sexe": "M",
+            "age": 45
+        },
+        "symptoms_input": [
+            "douleur légère au bras"
+        ],
+        "results": []
+    },
+    {
+        "metadata": {
+            "district": "Bertoua",
+            "fosa": "Dispensaire",
+            "date": "2026-01-21",
+            "patient_code": "PAT-1066",
+            "sexe": "M",
+            "age": 11
+        },
+        "symptoms_input": [
+            "douleur légère au bras"
+        ],
+        "results": []
+    }
+]

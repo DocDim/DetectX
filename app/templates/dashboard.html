@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detect-X | Historique & Statistiques SIMR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen p-4 md:p-8 font-sans">
+
+    <div class="max-w-7xl mx-auto">
+        <header class="mb-8 flex flex-col md:flex-row justify-between items-center bg-white p-6 rounded-2xl shadow-sm border border-slate-200 gap-4">
+            <div>
+                <img src="{{ url_for('static', filename='img/logo_detectx.png') }}" alt="Detect-X" style="height: 35px; width: auto;" class="object-contain mb-1">
+                <p class="text-slate-500 text-[10px] uppercase tracking-widest font-bold">Tableau de Bord SIMR | Suivi en temps réel</p>
+            </div>
+            <div class="flex gap-3">
+                <button onclick="window.location.reload()" class="p-2.5 bg-slate-100 hover:bg-slate-200 rounded-xl transition-all">🔄</button>
+                <a href="/" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl text-sm font-bold transition-all shadow-lg active:scale-95 flex items-center gap-2">
+                    <span>➕</span> Nouvelle Consultation
+                </a>
+            </div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Total des Cas</p>
+                <h3 id="totalCases" class="text-3xl font-black text-slate-800">-</h3>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 border-l-4 border-l-red-500">
+                <p class="text-[10px] font-bold text-red-400 uppercase mb-1">Alertes Critiques</p>
+                <h3 id="criticalAlerts" class="text-3xl font-black text-red-600">-</h3>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <p class="text-[10px] font-bold text-blue-400 uppercase mb-1">Districts Actifs</p>
+                <h3 id="districtsCount" class="text-3xl font-black text-blue-600">-</h3>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <p class="text-[10px] font-bold text-green-400 uppercase mb-1">Moyenne de Suspicion</p>
+                <h3 id="avgScore" class="text-3xl font-black text-green-600">-%</h3>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col">
+                <div class="p-6 border-b border-slate-100 flex justify-between items-center">
+                    <h2 class="text-sm font-bold text-slate-800 uppercase tracking-widest">Historique des Notifications</h2>
+                    <span id="pageIndicator" class="text-[10px] font-bold text-slate-400 px-3 py-1 bg-slate-50 rounded-full italic">Page - / -</span>
+                </div>
+
+                <div class="p-4 bg-slate-100/70 border-b border-slate-200 grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div>
+                        <label class="block text-[9px] font-bold text-slate-500 uppercase mb-1">Code Patient</label>
+                        <input type="text" id="filterCode" oninput="resetAndLoad()" placeholder="Ex: PAT-101" class="w-full p-2 text-xs border border-slate-200 bg-white rounded-lg outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-[9px] font-bold text-slate-500 uppercase mb-1">District</label>
+                        <input type="text" id="filterDistrict" oninput="resetAndLoad()" placeholder="Tous les districts" class="w-full p-2 text-xs border border-slate-200 bg-white rounded-lg outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-[9px] font-bold text-slate-500 uppercase mb-1">Date Consultation</label>
+                        <input type="date" id="filterDate" onchange="resetAndLoad()" class="w-full p-2 text-xs border border-slate-200 bg-white rounded-lg outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div class="flex items-end">
+                        <button onclick="clearFilters()" class="w-full py-2 text-[10px] font-bold text-slate-500 hover:text-red-500 transition-colors uppercase">Effacer les filtres</button>
+                    </div>
+                </div>
+                
+                <div class="overflow-x-auto flex-grow">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-50 border-b border-slate-100">
+                                <th class="p-4 text-[10px] font-bold text-slate-500 uppercase">Date</th>
+                                <th class="p-4 text-[10px] font-bold text-slate-500 uppercase">Code Patient</th>
+                                <th class="p-4 text-[10px] font-bold text-slate-500 uppercase">District / Fosa</th>
+                                <th class="p-4 text-[10px] font-bold text-slate-500 uppercase">Suspicion Principale</th>
+                                <th class="p-4 text-[10px] font-bold text-slate-500 uppercase">Score SIMR</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyTableBody" class="text-sm text-slate-600">
+                            </tbody>
+                    </table>
+                </div>
+
+                <div class="p-4 bg-slate-50/50 border-t border-slate-100 flex justify-between items-center">
+                    <p id="totalItemsText" class="text-[10px] text-slate-400 font-medium"></p>
+                    <div class="flex gap-2">
+                        <button id="prevBtn" onclick="changePage(-1)" class="px-4 py-2 text-xs font-bold bg-white border border-slate-200 rounded-lg hover:bg-slate-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all">Précédent</button>
+                        <button id="nextBtn" onclick="changePage(1)" class="px-4 py-2 text-xs font-bold bg-white border border-slate-200 rounded-lg hover:bg-slate-50 disabled:opacity-30 disabled:cursor-not-allowed transition-all">Suivant</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 h-fit">
+                <h2 class="text-sm font-bold text-slate-800 uppercase tracking-widest mb-6">Répartition par Pathologie</h2>
+                <div class="relative aspect-square">
+                    <canvas id="diseasesChart"></canvas>
+                </div>
+                <div id="noChartData" class="hidden text-center py-10 text-slate-400 text-xs italic">
+                    Aucune donnée pour le graphique.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        const perPage = 10;
+        let totalPages = 1;
+        let chartInstance = null;
+
+        async function initDashboard() {
+            try {
+                // 1. Chargement des statistiques globales
+                const statsResp = await fetch('/get_dashboard_stats');
+                const stats = await statsResp.json();
+                
+                if (stats.success) {
+                    document.getElementById('totalCases').innerText = stats.total_cases;
+                    document.getElementById('criticalAlerts').innerText = stats.critical_count;
+                    document.getElementById('districtsCount').innerText = stats.districts_count;
+                    document.getElementById('avgScore').innerText = stats.avg_score + "%";
+                    
+                    if (Object.keys(stats.disease_distribution).length > 0) {
+                        renderChart(stats.disease_distribution);
+                    } else {
+                        document.getElementById('noChartData').classList.remove('hidden');
+                    }
+                }
+            } catch (e) { console.error("Erreur Stats", e); }
+
+            // 2. Chargement de l'historique filtré (première page)
+            loadHistory(currentPage);
+        }
+
+        async function loadHistory(page) {
+            const tableBody = document.getElementById('historyTableBody');
+            tableBody.innerHTML = '<tr><td colspan="5" class="p-10 text-center text-slate-400 italic">Filtrage en cours...</td></tr>';
+
+            // Récupération des filtres
+            const code = document.getElementById('filterCode').value;
+            const district = document.getElementById('filterDistrict').value;
+            const date = document.getElementById('filterDate').value;
+
+            // Construction de l'URL avec filtres et pagination
+            const queryParams = new URLSearchParams({
+                page: page,
+                per_page: perPage,
+                code: code,
+                district: district,
+                date: date
+            });
+
+            try {
+                const resp = await fetch(`/get_history?${queryParams}`);
+                const data = await resp.json();
+
+                if (data.success) {
+                    totalPages = data.total_pages;
+                    currentPage = data.current_page;
+                    
+                    // Mise à jour UI pagination
+                    document.getElementById('pageIndicator').innerText = `Page ${currentPage} sur ${totalPages}`;
+                    document.getElementById('totalItemsText').innerText = `${data.total_items} résultat(s) trouvé(s)`;
+                    document.getElementById('prevBtn').disabled = (currentPage <= 1);
+                    document.getElementById('nextBtn').disabled = (currentPage >= totalPages);
+
+                    tableBody.innerHTML = '';
+                    if (data.history.length === 0) {
+                        tableBody.innerHTML = '<tr><td colspan="5" class="p-10 text-center text-slate-400">Aucun historique disponible pour ces critères.</td></tr>';
+                        return;
+                    }
+
+                    data.history.forEach(item => {
+                        const topResult = item.results && item.results.length > 0 ? item.results[0] : { maladie: 'N/A', score: 0 };
+                        const scoreClass = topResult.score >= 50 ? 'text-red-600 font-bold' : 'text-slate-600';
+                        
+                        tableBody.innerHTML += `
+                            <tr class="border-b border-slate-50 hover:bg-slate-50 transition-colors">
+                                <td class="p-4 text-[11px] font-medium text-slate-500">${item.metadata.date || '---'}</td>
+                                <td class="p-4 font-bold text-slate-800">${item.metadata.patient_code || '---'}</td>
+                                <td class="p-4 text-[11px]">
+                                    <div class="font-bold text-slate-700">${item.metadata.district || 'N/A'}</div>
+                                    <div class="text-[9px] text-slate-400 uppercase">${item.metadata.fosa || '---'}</div>
+                                </td>
+                                <td class="p-4">
+                                    <span class="bg-blue-50 text-blue-700 px-2 py-1 rounded text-[10px] font-bold border border-blue-100 uppercase">
+                                        ${topResult.maladie}
+                                    </span>
+                                </td>
+                                <td class="p-4 text-xs ${scoreClass}">${topResult.score}%</td>
+                            </tr>`;
+                    });
+                }
+            } catch (e) { console.error("Erreur Filtre/Historique", e); }
+        }
+
+        function changePage(delta) {
+            const targetPage = currentPage + delta;
+            if (targetPage >= 1 && targetPage <= totalPages) {
+                currentPage = targetPage;
+                loadHistory(currentPage);
+            }
+        }
+
+        function resetAndLoad() {
+            currentPage = 1; // Toujours revenir à la première page lors du filtrage
+            loadHistory(currentPage);
+        }
+
+        function clearFilters() {
+            document.getElementById('filterCode').value = '';
+            document.getElementById('filterDistrict').value = '';
+            document.getElementById('filterDate').value = '';
+            resetAndLoad();
+        }
+
+        function renderChart(distribution) {
+            const ctx = document.getElementById('diseasesChart').getContext('2d');
+            if (chartInstance) chartInstance.destroy();
+
+            chartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(distribution),
+                    datasets: [{
+                        data: Object.values(distribution),
+                        backgroundColor: ['#3b82f6', '#ef4444', '#f59e0b', '#10b981', '#6366f1', '#ec4899', '#94a3b8'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 10, padding: 15, font: { size: 10 } } }
+                    },
+                    cutout: '75%'
+                }
+            });
+        }
+
+        window.onload = initDashboard;
+    </script>
+</body>
+</html>
