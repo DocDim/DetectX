@@ -1,65 +1,67 @@
-# Detect-X | Aide à la Décision Clinique & Surveillance SIMR
+# Detect-X | Clinical Decision Support & IDSR Surveillance
 
-**Detect-X** est une solution logicielle conçue pour renforcer la surveillance épidémiologique au Cameroun. Elle permet aux professionnels de santé d'identifier rapidement les cas suspects de pathologies prioritaires en s'appuyant sur les protocoles officiels de la **Surveillance Intégrée des Maladies et la Riposte (SIMR)**.
+**Detect-X** is a software solution designed to strengthen epidemiological surveillance. It assists healthcare professionals in the rapid identification of suspected cases for priority diseases, based on the official case definitions of the Cameroon's **Integrated Disease Surveillance and Response (IDSR)** technical guidelines.
 
-## 🌟 Fonctionnalités
+## 🌟 Key Features
 
-* **Analyse Clinique Pondérée** : Calcul d'un score de suspicion basé sur l'importance clinique des symptômes (Signes majeurs vs signes mineurs).
-* **Base SIMR Complète** : Couvre 23 pathologies incluant le Choléra, les Fièvres Hémorragiques (Ebola, Marbourg), la Rougeole, et la Poliomyélite.
-* **Tableau de Bord Dynamique** : Visualisation des agrégats statistiques, alertes critiques et répartition par district de santé.
-* **Gestion de l'Historique** : Archivage persistant des consultations avec filtres avancés (Code patient, District, Date).
-* **Importation Massive** : Module d'import CSV avec barre de progression pour le traitement de larges cohortes de données.
+* **Weighted Clinical Analysis**: Calculation of a suspicion score based on the clinical importance of symptoms (Major signs vs. Minor signs).
+* **Comprehensive IDSR Database**: Covers 23 priority pathologies including Cholera, Hemorrhagic Fevers (Ebola, Marburg), Measles, and Poliomyelitis.
+* **Dynamic Dashboard**: Real-time visualization of statistical aggregates, critical alerts, and geographical distribution by health district.
+* **History Management**: Persistent archiving of consultations with advanced filters (Patient code, District, Date).
+* **Bulk Import**: CSV import module with a real-time progress bar for processing large patient cohorts.
 
-## 🛠️ Architecture du Projet
+## 🛠️ Project Architecture
 
-D'après l'arborescence actuelle du système :
+Based on the current system tree:
 
 ```text
 DETECTX/
 ├── app/
 │   ├── data/
-│   │   ├── dict_patologies_weighted.json  # Base de connaissances (Critères & Poids)
-│   │   └── analyses_history.json          # Base de données NoSQL des cas
+│   │   ├── dict_patologies_weighted.json  # Knowledge Base (Criteria & Weights)
+│   │   └── analyses_history.json          # NoSQL Database of cases
 │   ├── services/
-│   │   └── analysis_service.py            # Logique métier et calculs stats
+│   │   └── analysis_service.py            # Business logic and stats calculations
 │   ├── templates/
-│   │   ├── dashboard.html                 # Interface de suivi épidémiologique
-│   │   └── index.html                     # Interface de diagnostic individuel
-│   ├── engine.py                          # Moteur de règles de calcul (Scoring)
-│   ├── routes.py                          # API Rest et gestion des flux
-│   └── models.py                          # Définitions des structures de données
-├── static/                                # Ressources CSS, JS et Images
-├── run.py                                 # Point d'entrée de l'application Flask
-└── requirements.txt                       # Dépendances (Flask, Pandas, etc.)
+│   │   ├── dashboard.html                 # Epidemiological tracking interface
+│   │   └── index.html                     # Individual diagnostic interface
+│   ├── engine.py                          # Rule engine for scoring
+│   ├── routes.py                          # REST API and workflow management
+│   └── models.py                          # Data structure definitions
+├── static/                                # CSS, JS, and Image resources
+├── run.py                                 # Flask application entry point
+├── generate_test_data.py                  # Test data generation script
+└── requirements.txt                       # Dependencies (Flask, Pandas, etc.)
 ```
 
-## 🚀 Installation Rapide
+## 🚀 Quick Start
 
-1.  **Installation des dépendances** :
+1.  **Install dependencies**:
     ```bash
     pip install -r requirements.txt
     ```
 
-2.  **Configuration des données** :
-    Vérifiez que le fichier `dict_patologies_weighted.json` est présent dans `app/data/`.
+2.  **Data Configuration**:
+    Ensure the file `dict_patologies_weighted.json` is present in the `app/data/` directory.
 
-3.  **Lancement** :
+3.  **Launch**:
     ```bash
     python run.py
     ```
+    The app will be available at `http://127.0.0.1:5000`.
 
-## 📊 Méthodologie de Calcul
+## 📊 Scoring Methodology
 
-Le moteur de règles utilise une pondération rigoureuse :
-* **Poids 3** : Signe pathognomonique ou majeur (définit le cas).
-* **Poids 2** : Signe important (fortement évocateur).
-* **Poids 1** : Signe mineur ou général (commun à plusieurs pathologies).
+The rule engine uses a rigorous weighting system:
+* **Weight 3**: Pathognomonic or Major sign (defines the case).
+* **Weight 2**: Important sign (strongly suggestive).
+* **Weight 1**: Minor or General sign (common to multiple pathologies).
 
-$$Score = \left( \frac{\sum \text{Poids des signes détectés}}{\sum \text{Poids totaux de la maladie}} \right) \times 100$$
+$$Score = \left( \frac{\sum \text{Weights of detected signs}}{\sum \text{Total weights of the disease}} \right) \times 100$$
 
-## ⚖️ Conformité et Éthique
+## ⚖️ Compliance and Ethics
 
-L'application intègre un **Avis de non-responsabilité** (Disclaimer) obligatoire à chaque session. Detect-X est un outil de **support à la réflexion clinique** et ne remplace jamais le diagnostic final d'un médecin ou la confirmation biologique en laboratoire.
+The application includes a mandatory **Disclaimer** at the start of each session. Detect-X is a **clinical reflection support tool** and never replaces the final diagnosis of a physician or biological confirmation in a laboratory.
 
 ---
-*Projet développé par Tchifou M. Dieffi.*
+*Project developed by Miltiade Tchifou Diefi.*
